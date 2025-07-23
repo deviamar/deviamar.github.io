@@ -54,6 +54,8 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-color);
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .nav-links {
@@ -89,25 +91,48 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
         }
 
-        /* Home Section */
+        /* Home Section Styles */
+        .home-section {
+            //display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-section.active{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+        }
+
         .hero {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            min-height: 80vh;
-            gap: 4rem;
+            justify-content: center;
+            min-height: 70vh;
+            gap: 2rem;
+            width: 100%;
+            text-align: center;
         }
 
         .hero-content {
-            flex: 1;
             max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .hero-image {
-            flex: 0 0 300px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-image {
@@ -118,6 +143,11 @@
             border: 4px solid var(--light-gray);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
         }
 
         .profile-image:hover {
@@ -135,8 +165,43 @@
         .tagline {
             font-size: 1.3rem;
             color: var(--secondary-color);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             font-weight: 500;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .email-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .linkedin-icon {
+            background: linear-gradient(135deg, #0077b5 0%, #0066a2 100%);
+            color: white;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .description {
@@ -144,12 +209,14 @@
             line-height: 1.8;
             color: var(--dark-gray);
             margin-bottom: 2rem;
+            max-width: 100%;
         }
 
         .cta-buttons {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
+            justify-content: center;
         }
 
         .btn {
@@ -186,46 +253,36 @@
             color: white;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: var(--light-gray);
-            padding: 4rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-item {
+        /* Section Headers */
+        .section-header {
             text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            margin-bottom: 4rem;
         }
 
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            color: var(--secondary-color);
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
             margin-bottom: 1rem;
         }
 
-        /* Research & Outreach Sections */
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Projects Grid */
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
             margin-top: 3rem;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .project-card {
@@ -235,6 +292,10 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border: 1px solid var(--light-gray);
+            width: 100%;
+            max-width: 700px;
+            text-align: left;
+            margin: 0 auto;
         }
 
         .project-card:hover {
@@ -262,6 +323,7 @@
         .project-description {
             line-height: 1.7;
             margin-bottom: 1.5rem;
+            text-align: left;
         }
 
         .project-tags {
@@ -269,6 +331,7 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1rem;
+            justify-content: flex-start;
         }
 
         .tag {
@@ -283,6 +346,8 @@
         .project-links {
             display: flex;
             gap: 1rem;
+            justify-content: flex-start;
+            flex-wrap: wrap;
         }
 
         .project-link {
@@ -296,32 +361,10 @@
             text-decoration: underline;
         }
 
-        /* Section Headers */
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--dark-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .hero {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             .hero h1 {
@@ -337,28 +380,24 @@
                 align-items: center;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .social-icons {
+                gap: 0.8rem;
             }
-        }
 
-        /* Hidden section for personal timeline */
-        .timeline-section {
-            display: none;
-            padding: 2rem;
-            background: var(--light-gray);
-            margin: 2rem 0;
-            border-radius: 10px;
-        }
+            .social-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
 
-        .timeline-toggle {
-            background: none;
-            border: none;
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            cursor: pointer;
-            margin-top: 1rem;
-            text-decoration: underline;
+            .projects-grid {
+                gap: 1.5rem;
+            }
+
+            .project-card {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -366,61 +405,45 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Devi Amarsaikhan</div>
+            <div class="logo" onclick="showSection('home')">Devi Amarsaikhan</div>
             <ul class="nav-links">
-                <li><a href="#" onclick="showSection('home')" class="active">Home</a></li>
-                <li><a href="#" onclick="showSection('research')">Research</a></li>
-                <li><a href="#" onclick="showSection('outreach')">Outreach</a></li>
+                <li><a href="#" onclick="showSection('home')" class="nav-link active">Home</a></li>
+                <li><a href="#" onclick="showSection('research')" class="nav-link">Research</a></li>
+                <li><a href="#" onclick="showSection('outreach')" class="nav-link">Outreach</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="section active">
+    <section id="home" class="section home-section active">
         <div class="container">
             <div class="hero">
+                <div class="hero-image">
+                    <div class="profile-image">👤</div>
+                </div>
                 <div class="hero-content">
                     <h1>Devi Amarsaikhan</h1>
                     <p class="tagline">Robotics Researcher & Entrepreneur</p>
+                    <div class="social-icons">
+                        <a href="mailto:devamar@ucdavis.edu" class="social-icon email-icon" title="Email">
+                            ✉️
+                        </a>
+                        <a href="https://www.linkedin.com/in/devi-amarsaikhan/" target="_blank" class="social-icon linkedin-icon" title="LinkedIn">
+                            💼
+                        </a>
+                    </div>
                     <p class="description">
                         Undergraduate student passionate about robotics research, entrepreneurship, and building real-world tools that improve lives.
                     </p>
                     <p class="description">
-                        Over the past year, I’ve led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait, earning a Judges Award at my college’s research symposium. These projects challenged me to figure out the research and development process from the ground up: identifying meaningful problems, designing and prototyping solutions, integrating sensors, and iterating based on user needs. Along the way, I learned how to build connections, find mentors, and take initiative even without formal lab affiliation.
+                        Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait, earning a Judges Award at my college's research symposium. These projects challenged me to figure out the research and development process from the ground up: identifying meaningful problems, designing and prototyping solutions, integrating sensors, and iterating based on user needs. Along the way, I learned how to build connections, find mentors, and take initiative even without formal lab affiliation.
                     </p>
                     <p class="description">
-                        I'm currently diving deeper into computer vision and dexterous manipulation, and I’m eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
+                        I'm currently diving deeper into computer vision and dexterous manipulation, and I'm eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
                     </p>
                     <div class="cta-buttons">
                         <a href="#" onclick="showSection('research')" class="btn btn-primary">View Research</a>
                         <a href="#" onclick="showSection('outreach')" class="btn btn-secondary">My Outreach</a>
-                    </div>
-                    
-                    
-                </div>
-                <div class="hero-image">
-                    <img src="images/Devi_Headshot.jpg" alt="Headshot" class="profile-image">
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Interested in collaboration, mentorship, or discussing research opportunities?</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
-                        <p>devamar@ucdavis.edu</p>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🔗</div>
-                        <h3>LinkedIn</h3>
-                        <p>https://www.linkedin.com/in/devi-amarsaikhan/</p>
                     </div>
                 </div>
             </div>
@@ -478,8 +501,6 @@
                         <a href="#" class="project-link">GitHub</a>
                     </div>
                 </div>
-
-                
             </div>
         </div>
     </section>
@@ -496,13 +517,13 @@
                 <div class="project-card">
                     <div class="project-header">
                         <h3 class="project-title">NextGEN Innovators Club</h3>
-                        <p class="project-meta">Founder & President | Sept 2024 – July 2025 </p>
+                        <p class="project-meta">Founder & President | Sept 2024 – July 2025</p>
                     </div>
                     <p class="project-description">
                         Founded and lead a club dedicated to teaching underrepresented students the engineering design process through hands-on bridge-building projects. Successfully completed a 7-week after-school program with 16 students at Gabriela Mistral Elementary School.
                     </p>
                     <p class="project-description">
-                      Impact & Growth: Recruited new leadership team and officers, currently expanding to additional local schools to reach more underserved youth and inspire the next generation of engineers and innovators.
+                        Impact & Growth: Recruited new leadership team and officers, currently expanding to additional local schools to reach more underserved youth and inspire the next generation of engineers and innovators.
                     </p>
                     <div class="project-tags">
                         <span class="tag">STEM Education</span>
@@ -519,7 +540,7 @@
                 <div class="project-card">
                     <div class="project-header">
                         <h3 class="project-title">Startup Club at Foothill College</h3>
-                        <p class="project-meta">Co-Founder & Co-President | Jan 2025 – June 2025 </p>
+                        <p class="project-meta">Co-Founder & Co-President | Jan 2025 – June 2025</p>
                     </div>
                     <p class="project-description">
                         Co-founded and lead a startup club to help students transform technical ideas into viable ventures. Organized two major pitch events featuring startup founders and venture capitalists, attracting 140+ attendees and creating valuable networking opportunities.
@@ -528,21 +549,22 @@
                         Programs & Impact: Lead comprehensive Startup Workshop series guiding students from initial ideation through MVP development. Actively support Innovation Challenge outreach through presentations, campus tabling, and classroom engagement.
                     </p>
                     <div class="project-tags">
-                        <span class="tag">Leadership</span>
                         <span class="tag">Entrepreneurship</span>
-                        <span class="tag">Event Organization</span>
+                        <span class="tag">Event Planning</span>
+                        <span class="tag">Workshop Development</span>
+                        <span class="tag">Student Leadership</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Pitch Events</a>
-                        <a href="#" class="project-link">Workshop Series</a>
+                        <a href="#" class="project-link">Event Photos</a>
+                        <a href="#" class="project-link">Workshop Materials</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <script>
+        // Navigation functionality
         function showSection(sectionName) {
             // Hide all sections
             const sections = document.querySelectorAll('.section');
@@ -550,43 +572,21 @@
                 section.classList.remove('active');
             });
 
-            // Remove active class from all nav links
-            const navLinks = document.querySelectorAll('.nav-links a');
+            // Show the selected section
+            document.getElementById(sectionName).classList.add('active');
+
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
 
-            // Show selected section
-            document.getElementById(sectionName).classList.add('active');
-
-            // Add active class to clicked nav link
-            event.target.classList.add('active');
-
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-
-        function toggleTimeline() {
-            const timeline = document.getElementById('timeline');
-            const button = document.querySelector('.timeline-toggle');
-            
-            if (timeline.style.display === 'none' || timeline.style.display === '') {
-                timeline.style.display = 'block';
-                button.textContent = 'Hide Timeline';
-            } else {
-                timeline.style.display = 'none';
-                button.textContent = 'View My Journey Timeline';
+            // Find and activate the corresponding nav link
+            const activeLink = document.querySelector(`[onclick="showSection('${sectionName}')"]`);
+            if (activeLink && activeLink.classList.contains('nav-link')) {
+                activeLink.classList.add('active');
             }
         }
-
-        // Smooth scrolling for internal navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth transitions
-            document.body.style.transition = 'all 0.3s ease';
-            
-            // Initialize timeline as hidden
-            document.getElementById('timeline').style.display = 'none';
-        });
 
         // Add scroll effect to navbar
         window.addEventListener('scroll', function() {
@@ -598,6 +598,11 @@
                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
                 navbar.style.boxShadow = 'none';
             }
+        });
+
+        // Initialize with home section active
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
         });
     </script>
 </body>
