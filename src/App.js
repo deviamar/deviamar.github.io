@@ -16,10 +16,10 @@ const App = () => {
       description: "Developed a bio-inspired robotic hand that mimics human finger movements and grip patterns. The project involved biomechanical analysis, actuator design, and control system implementation using machine learning algorithms for adaptive grasping.",
       tags: ["Robotics", "Bio-inspired Design", "CAD and 3D Printing", "MuJoCo Simulation"],
       links: [
-        { label: "Paper", href: "#" },
-        { label: "Research Process", href: "#" },
-        { label: "Demo Video", href: "#" },
-        { label: "Code", href: "#" }
+        { label: "Paper"},
+        { label: "Research Process"},
+        { label: "Demo Video"},
+        { label: "Code"}
       ]
     },
     {
@@ -28,9 +28,9 @@ const App = () => {
       description: "Designed and implemented a wearable sensor system for real-time gait analysis and movement pattern detection. The system uses IoT sensors and machine learning to provide insights for rehabilitation and health monitoring applications.",
       tags: ["Health Tech", "IoT", "Signal Processing", "Wearable Sensors"],
       links: [
-        { label: "Publication", href: "#" },
-        { label: "Dataset", href: "#" },
-        { label: "GitHub", href: "#" }
+        { label: "Publication"},
+        { label: "Dataset"},
+        { label: "GitHub"}
       ]
     }
   ];
@@ -45,8 +45,8 @@ const App = () => {
       ],
       tags: ["STEM Education", "Community Outreach", "Engineering Design", "Program Development"],
       links: [
-        { label: "Photos", href: "#" },
-        { label: "Curriculum", href: "#" }
+        { label: "Photos"},
+        { label: "Curriculum"}
       ]
     },
     {
@@ -58,8 +58,8 @@ const App = () => {
       ],
       tags: ["Entrepreneurship", "Event Planning", "Workshop Development", "Student Leadership"],
       links: [
-        { label: "Event Photos", href: "#" },
-        { label: "Workshop Materials", href: "#" }
+        { label: "Event Photos"},
+        { label: "Workshop Materials"}
       ]
     }
   ];
