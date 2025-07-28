@@ -66,6 +66,18 @@ const App = () => {
 
   const outreachProjects = [
     {
+      title: "BKOA: STEM Outreach Nonprofit",
+      meta: "Board Member & Treasurer | Apr 2025 – Present",
+      description: [
+        "We are the Bay Area branch of JKOA, a nonprofit dedicated to empowering students from underrepresented backgrounds to pursue and thrive in STEM. Building on my experience as founder and president of NextGEN Innovators, I serve on B-Koa’s board to help shape its outreach strategy, develop engaging curriculum for elementary students, and plan community events. I’ve worked closely with the team to design this year’s plan, create fun, accessible STEM activities, and expand B-Koa’s network by connecting it with educators and mentors I met through my earlier outreach efforts. In addition to my board responsibilities, I support the organization as treasurer by maintaining accurate records of all expenses and purchases.",
+      ],
+      tags: ["STEM Education", "Community Outreach", "Program Development"],
+      links: [
+        { label: "JKOA Origin", href: "/pdfs/JKOA-O.pdf" },
+        { label: "Brochure", href: "/pdfs/JKOA-B.pdf" }
+      ]
+    },
+    {
       title: "NextGEN Innovators Club",
       meta: "Founder & President | Sept 2024 – July 2025",
       description: [
@@ -74,8 +86,8 @@ const App = () => {
       ],
       tags: ["STEM Education", "Community Outreach", "Engineering Design", "Program Development"],
       links: [
-        { label: "Photos", href: null },
-        { label: "Curriculum", href: null }
+        { label: "Curriculum", href: null },
+        { label: "Photos", href: null }
       ]
     },
     {
@@ -89,6 +101,18 @@ const App = () => {
       links: [
         { label: "Event Photos", href: null },
         { label: "Workshop Materials", href: null }
+      ]
+    },
+    {
+      title: "Dolma Ling Soup Kitchen Greenhouse Initiative",
+      meta: "Founder & President | 2019 | ISU",
+      description: [
+        "Dolma Ling Soup Kitchen (DLSK) provides warm meals six days a week, free weekly medical checkups, winter clothing, and holiday gifts for the homeless community in Ulaanbaatar, Mongolia. After volunteering there weekly in 8th grade through a school partnership, I was deeply moved by the stories I heard and wanted to offer more lasting support. I founded a school club dedicated to DLSK and led 11 members in making handmade jewelry during lunch breaks to raise funds and awareness at school events. With the support of 293 donors, we raised enough money in 6 months to purchase two greenhouses, water system, camera, seedlings, and all necessary equipment. This provided DLSK with a sustainable source of vegetables and income, increasing their self-sufficiency year-round. Our work was later published in the EARCOS Journal, an East Asia Regional Council of Schools publication that highlights impactful student initiatives across 229 international member schools.",
+      ],
+      tags: ["Fundraising", "Community Service", "Sustainability", "Student Leadership"],
+      links: [
+        { label: "Journal Publication", href: "/pdfs/GH.pdf" },
+        { label: "Photos", href: null }
       ]
     }
   ];
