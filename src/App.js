@@ -119,12 +119,10 @@ const App = () => {
               src: "/images/greenhouse/fundraising/C0.jpg",
               caption: "Club members creating handmade jewelry for fundraising"
             },
-          images: [
             {
               src: "/images/greenhouse/fundraising/C1.jpg",
               caption: "Jewelry materials"
             },
-          images: [
             {
               src: "/images/greenhouse/fundraising/C2.jpg",
               caption: "Sample receipt"
@@ -138,12 +136,10 @@ const App = () => {
               src: "/images/greenhouse/building/B0.jpg",
               caption: "Building greenhouse part 1"
             },
-          images: [
             {
               src: "/images/greenhouse/building/B1.jpg",
               caption: "Building greenhouse part 2"
             },
-          images: [
             {
               src: "/images/greenhouse/building/B2.jpg",
               caption: "Building greenhouse part 3"
@@ -157,22 +153,18 @@ const App = () => {
               src: "/images/greenhouse/equipment/E0.jpg",
               caption: "Equipment to Plant Vegetables"
             },
-          images: [
             {
               src: "/images/greenhouse/equipment/E1.jpg",
               caption: "Camera for Security"
             },
-          images: [
             {
               src: "/images/greenhouse/equipment/E2.jpg",
               caption: "Camera System"
             },
-            images: [
             {
               src: "/images/greenhouse/equipment/E3.jpg",
               caption: "Watering System"
             },
-          images: [
             {
               src: "/images/greenhouse/equipment/E4.jpg",
               caption: "Watering Plants"
@@ -185,27 +177,21 @@ const App = () => {
             {
               src: "/images/greenhouse/harvest/H1.jpg"
             },
-          images: [
             {
               src: "/images/greenhouse/harvest/H2.jpg"
             },
-          images: [
             {
               src: "/images/greenhouse/harvest/H3.jpg"
             },
-            images: [
             {
               src: "/images/greenhouse/harvest/H4.jpg"
             },
-          images: [
             {
               src: "/images/greenhouse/harvest/H5.jpg"
             },
-          images: [
             {
               src: "/images/greenhouse/harvest/H6.jpg"
             },
-            images: [
             {
               src: "/images/greenhouse/harvest/H7.jpg"
             }
@@ -218,12 +204,10 @@ const App = () => {
               src: "/images/greenhouse/serving/S0.jpg",
               caption: "Vegetables"
             },
-          images: [
             {
               src: "/images/greenhouse/serving/S1.jpg",
               caption: "Salad"
             },
-          images: [
             {
               src: "/images/greenhouse/serving/S2.jpg",
               caption: "Serving the Food!"
@@ -455,28 +439,28 @@ const App = () => {
                     ))}
                   </div>
 
-{/* Add photo gallery display */}
-{showPhotos[index] && project.photoGroups && (
-  <div className="mt-6 space-y-6">
-    {project.photoGroups.map((group, groupIndex) => (
-      <div key={groupIndex}>
-        <h4 className="text-lg font-semibold text-slate-700 mb-3">{group.title}</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {group.images.map((image, imageIndex) => (
-            <div key={imageIndex} className="bg-gray-50 rounded-lg p-4">
-              <img 
-                src={image.src} 
-                alt={image.caption}
-                className="w-full h-48 object-cover rounded-lg mb-2"
-              />
-              <p className="text-sm text-gray-600 text-center">{image.caption}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    ))}
-  </div>
-)}
+                {/* Add photo gallery display */}
+                {showPhotos[index] && project.photoGroups && (
+                  <div className="mt-6 space-y-6">
+                    {project.photoGroups.map((group, groupIndex) => (
+                      <div key={groupIndex}>
+                        <h4 className="text-lg font-semibold text-slate-700 mb-3">{group.title}</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {group.images.map((image, imageIndex) => (
+                            <div key={imageIndex} className="bg-gray-50 rounded-lg p-4">
+                              <img 
+                                src={image.src} 
+                                alt={image.caption}
+                                className="w-full h-48 object-cover rounded-lg mb-2"
+                              />
+                              <p className="text-sm text-gray-600 text-center">{image.caption}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
                     
                 </div>
               ))}
