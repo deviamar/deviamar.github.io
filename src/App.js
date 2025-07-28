@@ -5,6 +5,7 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showPhotos, setShowPhotos] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null);
   
   const showSection = (sectionName) => {
     setActiveSection(sectionName);
@@ -449,7 +450,8 @@ const App = () => {
                               <img 
                                 src={image.src} 
                                 alt={image.caption}
-                                className="w-full h-48 object-cover rounded-lg mb-2"
+                                className="w-full h-48 object-cover rounded-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity"
+                                onClick={() => setSelectedImage(image)}
                               />
                               <p className="text-sm text-gray-600 text-center">{image.caption}</p>
                             </div>
@@ -459,6 +461,31 @@ const App = () => {
                     ))}
                   </div>
                 )}
+
+                  {/* Image Modal */}
+                  {selectedImage && (
+                    <div 
+                      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+                      onClick={() => setSelectedImage(null)}
+                    >
+                      <div className="max-w-4xl max-h-full bg-white rounded-lg overflow-hidden">
+                        <img 
+                          src={selectedImage.src} 
+                          alt={selectedImage.caption}
+                          className="w-full h-auto max-h-[80vh] object-contain"
+                        />
+                        <div className="p-4">
+                          <p className="text-center text-gray-700">{selectedImage.caption}</p>
+                          <button 
+                            onClick={() => setSelectedImage(null)}
+                            className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                     
                 </div>
               ))}
