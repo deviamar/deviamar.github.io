@@ -16,10 +16,10 @@ const App = () => {
       description: "Developed a bio-inspired robotic hand that mimics human finger movements and grip patterns. The project involved biomechanical analysis, actuator design, and control system implementation using machine learning algorithms for adaptive grasping.",
       tags: ["Robotics", "Bio-inspired Design", "CAD and 3D Printing", "MuJoCo Simulation"],
       links: [
-        { label: "Paper"},
-        { label: "Research Process"},
-        { label: "Demo Video"},
-        { label: "Code"}
+        { label: "Paper", href: null },
+        { label: "Research Process", href: null },
+        { label: "Demo Video", href: null },
+        { label: "Code", href: null }
       ]
     },
     {
@@ -28,9 +28,9 @@ const App = () => {
       description: "Designed and implemented a wearable sensor system for real-time gait analysis and movement pattern detection. The system uses IoT sensors and machine learning to provide insights for rehabilitation and health monitoring applications.",
       tags: ["Health Tech", "IoT", "Signal Processing", "Wearable Sensors"],
       links: [
-        { label: "Publication"},
-        { label: "Dataset"},
-        { label: "GitHub"}
+        { label: "Publication", href: null },
+        { label: "Dataset", href: null },
+        { label: "GitHub", href: null }
       ]
     }
   ];
@@ -45,8 +45,8 @@ const App = () => {
       ],
       tags: ["STEM Education", "Community Outreach", "Engineering Design", "Program Development"],
       links: [
-        { label: "Photos"},
-        { label: "Curriculum"}
+        { label: "Photos", href: null },
+        { label: "Curriculum", href: null }
       ]
     },
     {
@@ -58,8 +58,8 @@ const App = () => {
       ],
       tags: ["Entrepreneurship", "Event Planning", "Workshop Development", "Student Leadership"],
       links: [
-        { label: "Event Photos"},
-        { label: "Workshop Materials"}
+        { label: "Event Photos", href: null },
+        { label: "Workshop Materials", href: null }
       ]
     }
   ];
@@ -136,8 +136,10 @@ const App = () => {
                     <Linkedin size={20} />
                   </a>
                   <a 
-                    href="#" 
-                    className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    href="https://github.com/deviamar"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                     title="GitHub"
                   >
                     <Github size={20} />
@@ -206,9 +208,15 @@ const App = () => {
                   </div>
                   <div className="flex flex-wrap gap-4">
                     {project.links.map((link, linkIndex) => (
-                      <a key={linkIndex} href={link.href} className="text-blue-500 font-semibold text-sm hover:underline">
-                        {link.label}
-                      </a>
+                      link.href ? (
+                        <a key={linkIndex} href={link.href} className="text-blue-500 font-semibold text-sm hover:underline">
+                          {link.label}
+                        </a>
+                      ) : (
+                        <span key={linkIndex} className="text-gray-400 font-semibold text-sm">
+                          {link.label}
+                        </span>
+                      )
                     ))}
                   </div>
                 </div>
