@@ -32,6 +32,33 @@ const App = () => {
         { label: "Dataset", href: null },
         { label: "GitHub", href: null }
       ]
+    },
+    {
+      title: "Exploring Lattice Point Geometry",
+      meta: "Advanced Math Seminar | 2023 | Stanford Online High School",
+      description: "In this seminar style mathematics class (now called the Geometry of Numbers), we explored foundational properties of lattice point geometry using tools from linear algebra, number theory, graph theory, and abstract algebra. I wrote rigorous proofs for theorems such as Pick’s Theorem (using three distinct methods), Blichfeldt’s Theorem, and Minkowski’s Theorem, and more. This work deepened my appreciation for the surprising ways seemingly disparate fields of mathematics intersect. My portfolio includes original proofs and solutions developed throughout the course.",
+      tags: ["Mathematics", "Writing Rigorous Proofs", "Latex"],
+      links: [
+        { label: "Pdf", href: "/pdfs/LPG.pdf" }
+      ]
+    },
+    {
+      title: "Mathematical Modeling of the Outer Ear",
+      meta: "IB Mathematics HL Internal Assessment | 2020 | ISU",
+      description: "For my IB Internal Assessment, I investigated how effectively the outer ear reflects sound waves into the ear canal. I designed my own methodology by sculpting a clay model of my ear, slicing it into horizontal and vertical cross sections, and graphing its surface to approximate the geometry. I modeled sound as planar waves and applied the Law of Reflection to analyze their paths. Since the focus of the project was mathematics, I completed all calculations by hand, limiting the scope to 12 rays at two incident angles. At the time, I was in 9th grade and had studied math up to Calculus I. To extend the analysis, I independently learned concepts from linear algebra and multivariable calculus through YouTube and Khan Academy.",
+      tags: ["Math modeling"],
+      links: [
+        { label: "Pdf", href: "/pdfs/IA.pdf" }
+      ]
+    },
+    {
+      title: "Quantum Physics: My First Dive into Physics",
+      meta: "Genius Hour Project | 2017 | ISU",
+      description: "I independently researched and wrote a 16-page paper exploring some of the most fascinating ideas in physics, from wave–particle duality and entanglement to time travel and the multiverse. While there were fundamental misunderstandings I’ve since corrected, the excitement of diving into these concepts and finding real-world analogies to make sense of them stayed with me. This project sparked a lifelong curiosity about physics and gave me early practice in reading scientific material and communicating complex ideas through writing.",
+      tags: ["Quantum Physics", "Independent Learning", "Science Communication"],
+      links: [
+        { label: "Pdf", href: "/pdfs/QP.pdf" }
+      ]
     }
   ];
 
