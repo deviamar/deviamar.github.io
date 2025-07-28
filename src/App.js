@@ -108,7 +108,8 @@ const App = () => {
       title: "Dolma Ling Soup Kitchen Greenhouse Initiative",
       meta: "Founder & President | 2019 | ISU",
       description: [
-        "Dolma Ling Soup Kitchen (DLSK) provides warm meals six days a week, free weekly medical checkups, winter clothing, and holiday gifts for the homeless community in Ulaanbaatar, Mongolia. After volunteering there weekly in 8th grade through a school partnership, I was deeply moved by the stories I heard and wanted to offer more lasting support. I founded a school club dedicated to DLSK and led 11 members in making handmade jewelry during lunch breaks to raise funds and awareness at school events. With the support of 293 donors, we raised enough money in 6 months to purchase two greenhouses, water system, camera, seedlings, and all necessary equipment. This provided DLSK with a sustainable source of vegetables and income, increasing their self-sufficiency year-round. Our work was later published in the EARCOS Journal, an East Asia Regional Council of Schools publication that highlights impactful student initiatives across 229 international member schools.",
+        "Volunteered weekly at Dolma Ling Soup Kitchen (DLSK), which provides warm meals six days a week, free medical checkups, winter clothing, and holiday gifts for the homeless community. Moved by the stories I heard, I wanted to offer more lasting support. I founded a school club and led 11 members in making handmade jewelry to sell at school events. With the support of 293 donors, we raised enough in six months to purchase two greenhouses, a water system, camera, seedlings, and all necessary equipment—providing DLSK with a sustainable source of vegetables and income to increase their self-sufficiency year-round.",
+        "See photos of our club members, the equipment we funded, the greenhouse installation, and the vegetables grown."
       ],
       tags: ["Fundraising", "Community Service", "Sustainability", "Student Leadership"],
       photoGroups: [
@@ -126,23 +127,24 @@ const App = () => {
             {
               src: "/images/greenhouse/fundraising/C2.jpg",
               caption: "Sample receipt"
+            },
+            {
+              src: "/images/greenhouse/fundraising/C4.jpg",
+              caption: "Group photo with DLSK staff, school faculty, and our club members celebrating first harvest!"
             }
           ]
         },
         {
-          title: "Building",
+          title: "Building the Greenhouse",
           images: [
             {
-              src: "/images/greenhouse/building/B0.jpg",
-              caption: "Building greenhouse part 1"
+              src: "/images/greenhouse/building/B0.jpg"
             },
             {
-              src: "/images/greenhouse/building/B1.jpg",
-              caption: "Building greenhouse part 2"
+              src: "/images/greenhouse/building/B1.jpg"
             },
             {
-              src: "/images/greenhouse/building/B2.jpg",
-              caption: "Building greenhouse part 3"
+              src: "/images/greenhouse/building/B2.jpg"
             }
           ]
         },
@@ -164,10 +166,6 @@ const App = () => {
             {
               src: "/images/greenhouse/equipment/E3.jpg",
               caption: "Watering System"
-            },
-            {
-              src: "/images/greenhouse/equipment/E4.jpg",
-              caption: "Watering Plants"
             }
           ]
         },
