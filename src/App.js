@@ -135,6 +135,15 @@ const App = () => {
                   >
                     <Linkedin size={20} />
                   </a>
+                  <a 
+                    href="https://github.com/deviamar"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    title="GitHub"
+                  >
+                    <Github size={20} />
+                  </a>
                 </div>
                 
                 {/* Description */}
