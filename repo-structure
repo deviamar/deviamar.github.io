@@ -1,0 +1,16 @@
+# Repository Structure
+
+deviamar.github.io/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+│   ├── index.html
+│   └── Devi_Headshot.jpg
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+├── package.json
+├── tailwind.config.js
+└── postcss.config.js
