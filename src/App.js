@@ -122,15 +122,15 @@ const App = () => {
               caption: "Club members creating handmade jewelry for fundraising"
             },
             {
-              src: "/images/greenhouse/fundraising/C1.jpg",
+              src: "/images/greenhouse/fundraising/C1.JPG",
               caption: "Jewelry materials"
             },
             {
-              src: "/images/greenhouse/fundraising/C2.jpg",
+              src: "/images/greenhouse/fundraising/C2.JPG",
               caption: "Sample receipt"
             },
             {
-              src: "/images/greenhouse/fundraising/C4.jpg",
+              src: "/images/greenhouse/fundraising/C4.JPG",
               caption: "Group photo with DLSK staff, school faculty, and our club members celebrating first harvest!"
             }
           ]
@@ -174,19 +174,19 @@ const App = () => {
           title: "Harvest",
           images: [
             {
-              src: "/images/greenhouse/harvest/H1.jpg"
+              src: "/images/greenhouse/harvest/H1.jpeg"
             },
             {
-              src: "/images/greenhouse/harvest/H2.jpg"
+              src: "/images/greenhouse/harvest/H2.jpeg"
             },
             {
-              src: "/images/greenhouse/harvest/H3.jpg"
+              src: "/images/greenhouse/harvest/H3.jpeg"
             },
             {
-              src: "/images/greenhouse/harvest/H4.jpg"
+              src: "/images/greenhouse/harvest/H4.jpeg"
             },
             {
-              src: "/images/greenhouse/harvest/H5.jpg"
+              src: "/images/greenhouse/harvest/H5.jpeg"
             },
             {
               src: "/images/greenhouse/harvest/H6.jpg"
