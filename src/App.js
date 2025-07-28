@@ -4,7 +4,8 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
-
+  const [showPhotos, setShowPhotos] = useState({});
+  
   const showSection = (sectionName) => {
     setActiveSection(sectionName);
   };
@@ -110,9 +111,129 @@ const App = () => {
         "Dolma Ling Soup Kitchen (DLSK) provides warm meals six days a week, free weekly medical checkups, winter clothing, and holiday gifts for the homeless community in Ulaanbaatar, Mongolia. After volunteering there weekly in 8th grade through a school partnership, I was deeply moved by the stories I heard and wanted to offer more lasting support. I founded a school club dedicated to DLSK and led 11 members in making handmade jewelry during lunch breaks to raise funds and awareness at school events. With the support of 293 donors, we raised enough money in 6 months to purchase two greenhouses, water system, camera, seedlings, and all necessary equipment. This provided DLSK with a sustainable source of vegetables and income, increasing their self-sufficiency year-round. Our work was later published in the EARCOS Journal, an East Asia Regional Council of Schools publication that highlights impactful student initiatives across 229 international member schools.",
       ],
       tags: ["Fundraising", "Community Service", "Sustainability", "Student Leadership"],
+      photoGroups: [
+        {
+          title: "Fundraising and Club",
+          images: [
+            {
+              src: "/images/greenhouse/fundraising/C0.jpg",
+              caption: "Club members creating handmade jewelry for fundraising"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/fundraising/C1.jpg",
+              caption: "Jewelry materials"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/fundraising/C2.jpg",
+              caption: "Sample receipt"
+            }
+          ]
+        },
+        {
+          title: "Building",
+          images: [
+            {
+              src: "/images/greenhouse/building/B0.jpg",
+              caption: "Building greenhouse part 1"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/building/B1.jpg",
+              caption: "Building greenhouse part 2"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/building/B2.jpg",
+              caption: "Building greenhouse part 3"
+            }
+          ]
+        },
+        {
+          title: "Equipment",
+          images: [
+            {
+              src: "/images/greenhouse/equipment/E0.jpg",
+              caption: "Equipment to Plant Vegetables"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/equipment/E1.jpg",
+              caption: "Camera for Security"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/equipment/E2.jpg",
+              caption: "Camera System"
+            },
+            images: [
+            {
+              src: "/images/greenhouse/equipment/E3.jpg",
+              caption: "Watering System"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/equipment/E4.jpg",
+              caption: "Watering Plants"
+            }
+          ]
+        },
+        {
+          title: "Harvest",
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H1.jpg"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H2.jpg"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H3.jpg"
+            },
+            images: [
+            {
+              src: "/images/greenhouse/harvest/H4.jpg"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H5.jpg"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H6.jpg"
+            },
+            images: [
+            {
+              src: "/images/greenhouse/harvest/H7.jpg"
+            }
+          ]
+        },
+        {
+          title: "Serving",
+          images: [
+            {
+              src: "/images/greenhouse/serving/S0.jpg",
+              caption: "Vegetables"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/serving/S1.jpg",
+              caption: "Salad"
+            },
+          images: [
+            {
+              src: "/images/greenhouse/serving/S2.jpg",
+              caption: "Serving the Food!"
+            }
+          ]
+        }
+      ],
       links: [
         { label: "Journal Publication", href: "/pdfs/GH.pdf" },
-        { label: "Photos", href: null }
+        { label: "Photos", href: "toggle-photos" }
       ]
     }
   ];
@@ -311,11 +432,52 @@ const App = () => {
                   </div>
                   <div className="flex flex-wrap gap-4">
                     {project.links.map((link, linkIndex) => (
+                      link.href === "toggle-photos" ? (
+                        <button
+                          key={linkIndex}
+                          onClick={() => setShowPhotos(prev => ({
+                            ...prev,
+                            [index]: !prev[index]
+                          }))}
+                          className="text-blue-500 font-semibold text-sm hover:underline cursor-pointer"
+                        >
+                      {showPhotos[index] ? "Hide Photos" : "Show Photos"}
+                      </button>
+                    ) : link.href ? (
                       <a key={linkIndex} href={link.href} className="text-blue-500 font-semibold text-sm hover:underline">
                         {link.label}
                       </a>
+                    ) : (
+                      <span key={linkIndex} className="text-gray-400 font-semibold text-sm">
+                        {link.label}
+                      </span>
+                    )
                     ))}
                   </div>
+
+{/* Add photo gallery display */}
+{showPhotos[index] && project.photoGroups && (
+  <div className="mt-6 space-y-6">
+    {project.photoGroups.map((group, groupIndex) => (
+      <div key={groupIndex}>
+        <h4 className="text-lg font-semibold text-slate-700 mb-3">{group.title}</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {group.images.map((image, imageIndex) => (
+            <div key={imageIndex} className="bg-gray-50 rounded-lg p-4">
+              <img 
+                src={image.src} 
+                alt={image.caption}
+                className="w-full h-48 object-cover rounded-lg mb-2"
+              />
+              <p className="text-sm text-gray-600 text-center">{image.caption}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+)}
+                    
                 </div>
               ))}
             </div>
