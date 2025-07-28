@@ -88,7 +88,7 @@ const App = () => {
       ],
       tags: ["STEM Education", "Community Outreach", "Engineering Design", "Program Development"],
       links: [
-        { label: "Curriculum", href: null },
+        { label: "Curriculum", href: "/pdfs/NF.pdf" },
         { label: "Photos", href: null }
       ]
     },
@@ -101,8 +101,8 @@ const App = () => {
       ],
       tags: ["Entrepreneurship", "Event Planning", "Workshop Development", "Student Leadership"],
       links: [
-        { label: "Event Photos", href: null },
-        { label: "Workshop Materials", href: null }
+        { label: "Startup Workshop Series Flyers", href: "/pdfs/SWS.pdf" },
+        { label: "Photos", href: null }
       ]
     },
     {
