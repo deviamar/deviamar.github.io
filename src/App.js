@@ -4,7 +4,9 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
-
+  const [showPhotos, setShowPhotos] = useState({});
+  const [selectedImage, setSelectedImage] = useState(null);
+  
   const showSection = (sectionName) => {
     setActiveSection(sectionName);
   };
@@ -107,12 +109,114 @@ const App = () => {
       title: "Dolma Ling Soup Kitchen Greenhouse Initiative",
       meta: "Founder & President | 2019 | ISU",
       description: [
-        "Dolma Ling Soup Kitchen (DLSK) provides warm meals six days a week, free weekly medical checkups, winter clothing, and holiday gifts for the homeless community in Ulaanbaatar, Mongolia. After volunteering there weekly in 8th grade through a school partnership, I was deeply moved by the stories I heard and wanted to offer more lasting support. I founded a school club dedicated to DLSK and led 11 members in making handmade jewelry during lunch breaks to raise funds and awareness at school events. With the support of 293 donors, we raised enough money in 6 months to purchase two greenhouses, water system, camera, seedlings, and all necessary equipment. This provided DLSK with a sustainable source of vegetables and income, increasing their self-sufficiency year-round. Our work was later published in the EARCOS Journal, an East Asia Regional Council of Schools publication that highlights impactful student initiatives across 229 international member schools.",
+        "Volunteered weekly at Dolma Ling Soup Kitchen (DLSK), which provides warm meals six days a week, free medical checkups, winter clothing, and holiday gifts for the homeless community. Moved by the stories I heard, I wanted to offer more lasting support. I founded a school club and led 11 members in making handmade jewelry to sell at school events. With the support of 293 donors, we raised enough in six months to purchase two greenhouses, a water system, camera, seedlings, and all necessary equipment—providing DLSK with a sustainable source of vegetables and income to increase their self-sufficiency year-round.",
+        "See photos of our club members, the equipment we funded, the greenhouse installation, and the vegetables grown."
       ],
       tags: ["Fundraising", "Community Service", "Sustainability", "Student Leadership"],
+      photoGroups: [
+        {
+          title: "Fundraising and Club",
+          images: [
+            {
+              src: "/images/greenhouse/fundraising/C0.jpg",
+              caption: "Club members creating handmade jewelry for fundraising"
+            },
+            {
+              src: "/images/greenhouse/fundraising/C1.JPG",
+              caption: "Jewelry materials"
+            },
+            {
+              src: "/images/greenhouse/fundraising/C2.JPG",
+              caption: "Sample receipt"
+            },
+            {
+              src: "/images/greenhouse/fundraising/C4.JPG",
+              caption: "Group photo with DLSK staff, school faculty, and our club members celebrating first harvest!"
+            }
+          ]
+        },
+        {
+          title: "Building the Greenhouse",
+          images: [
+            {
+              src: "/images/greenhouse/building/B0.jpg"
+            },
+            {
+              src: "/images/greenhouse/building/B1.jpg"
+            },
+            {
+              src: "/images/greenhouse/building/B2.jpg"
+            }
+          ]
+        },
+        {
+          title: "Equipment",
+          images: [
+            {
+              src: "/images/greenhouse/equipment/E0.jpg",
+              caption: "Equipment to Plant Vegetables"
+            },
+            {
+              src: "/images/greenhouse/equipment/E1.jpg",
+              caption: "Camera for Security"
+            },
+            {
+              src: "/images/greenhouse/equipment/E2.jpg",
+              caption: "Camera System"
+            },
+            {
+              src: "/images/greenhouse/equipment/E3.jpg",
+              caption: "Watering System"
+            }
+          ]
+        },
+        {
+          title: "Harvest",
+          images: [
+            {
+              src: "/images/greenhouse/harvest/H1.jpeg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H2.jpeg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H3.jpeg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H4.jpeg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H5.jpeg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H6.jpg"
+            },
+            {
+              src: "/images/greenhouse/harvest/H7.jpg"
+            }
+          ]
+        },
+        {
+          title: "Serving",
+          images: [
+            {
+              src: "/images/greenhouse/serving/S0.jpg",
+              caption: "Vegetables"
+            },
+            {
+              src: "/images/greenhouse/serving/S1.jpg",
+              caption: "Salad"
+            },
+            {
+              src: "/images/greenhouse/serving/S2.jpg",
+              caption: "Serving the Food!"
+            }
+          ]
+        }
+      ],
       links: [
         { label: "Journal Publication", href: "/pdfs/GH.pdf" },
-        { label: "Photos", href: null }
+        { label: "Photos", href: "toggle-photos" }
       ]
     }
   ];
@@ -311,11 +415,78 @@ const App = () => {
                   </div>
                   <div className="flex flex-wrap gap-4">
                     {project.links.map((link, linkIndex) => (
+                      link.href === "toggle-photos" ? (
+                        <button
+                          key={linkIndex}
+                          onClick={() => setShowPhotos(prev => ({
+                            ...prev,
+                            [index]: !prev[index]
+                          }))}
+                          className="text-blue-500 font-semibold text-sm hover:underline cursor-pointer"
+                        >
+                      {showPhotos[index] ? "Hide Photos" : "Show Photos"}
+                      </button>
+                    ) : link.href ? (
                       <a key={linkIndex} href={link.href} className="text-blue-500 font-semibold text-sm hover:underline">
                         {link.label}
                       </a>
+                    ) : (
+                      <span key={linkIndex} className="text-gray-400 font-semibold text-sm">
+                        {link.label}
+                      </span>
+                    )
                     ))}
                   </div>
+
+                {/* Add photo gallery display */}
+                {showPhotos[index] && project.photoGroups && (
+                  <div className="mt-6 space-y-6">
+                    {project.photoGroups.map((group, groupIndex) => (
+                      <div key={groupIndex}>
+                        <h4 className="text-lg font-semibold text-slate-700 mb-3">{group.title}</h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {group.images.map((image, imageIndex) => (
+                            <div key={imageIndex} className="bg-gray-50 rounded-lg p-4">
+                              <img 
+                                src={image.src} 
+                                alt={image.caption}
+                                className="w-full h-48 object-cover rounded-lg mb-2 cursor-pointer hover:opacity-80 transition-opacity"
+                                onClick={() => setSelectedImage(image)}
+                              />
+                              <p className="text-sm text-gray-600 text-center">{image.caption}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                  {/* Image Modal */}
+                  {selectedImage && (
+                    <div 
+                      className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+                      onClick={() => setSelectedImage(null)}
+                    >
+                      <div className="max-w-4xl max-h-full bg-white rounded-lg overflow-hidden">
+                        <img 
+                          src={selectedImage.src} 
+                          alt={selectedImage.caption}
+                          className="w-full h-auto max-h-[80vh] object-contain"
+                        />
+                        <div className="p-4">
+                          <p className="text-center text-gray-700">{selectedImage.caption}</p>
+                          <button 
+                            onClick={() => setSelectedImage(null)}
+                            className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-full"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                    
                 </div>
               ))}
             </div>
