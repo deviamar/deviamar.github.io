@@ -201,19 +201,19 @@ const App = () => {
               caption: "First Bridge 4"
             },
             {
-              src: "/images/nextgen/program/BK0.PNG",
+              src: "/images/nextgen/program/BK0.png",
               caption: "Building Bridge Kit 1"
             },
             {
-              src: "/images/nextgen/program/BK1.PNG",
+              src: "/images/nextgen/program/BK1.png",
               caption: "Building Bridge Kit 2"
             },
             {
-              src: "/images/nextgen/program/BK2.PNG",
+              src: "/images/nextgen/program/BK2.png",
               caption: "Building Bridge Kit 3"
             },
             {
-              src: "/images/nextgen/program/BK3.PNG",
+              src: "/images/nextgen/program/BK3.png",
               caption: "Building Bridge Kit 4"
             },
             {
