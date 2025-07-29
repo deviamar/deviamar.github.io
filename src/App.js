@@ -321,7 +321,7 @@ const App = () => {
               caption: "Startup Club and Business and Entrepreneurship Club Leaders at the Bay Angels Pitch Event"
             },
             {
-              src: "/images/startupclub/BAP.PNG",
+              src: "/images/startupclub/BAP.png",
               caption: "Live startup pitches to Bay Area investors"
             },
             {
