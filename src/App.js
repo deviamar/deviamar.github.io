@@ -87,9 +87,222 @@ const App = () => {
         "Impact & Growth: Recruited new leadership team and officers, currently expanding to additional local schools to reach more underserved youth and inspire the next generation of engineers and innovators."
       ],
       tags: ["STEM Education", "Community Outreach", "Engineering Design", "Program Development"],
+      photoGroups: [
+        {
+          title: "Bridges Designed and Built by BEC Club Members",
+          images: [
+            {
+              src: "/images/nextgen/BEC/B0.JPG",
+              caption: "Design 1"
+            },
+            {
+              src: "/images/nextgen/BEC/B1.JPG",
+              caption: "Bridge 1"
+            },
+            {
+              src: "/images/nextgen/BEC/B2.JPG",
+              caption: "Design 2"
+            },
+            {
+              src: "/images/nextgen/BEC/B3.JPG",
+              caption: "Bridge 2"
+            },
+            {
+              src: "/images/nextgen/BEC/B4.JPG",
+              caption: "Design 3"
+            },
+            {
+              src: "/images/nextgen/BEC/B5.JPG",
+              caption: "Bridge 3"
+            },
+            {
+              src: "/images/nextgen/BEC/B6.JPG",
+              caption: "Design 4"
+            },
+            {
+              src: "/images/nextgen/BEC/B7.JPG",
+              caption: "Bridge 4"
+            }
+          ]
+        },
+        {
+          title: "Bridges Designed and Built by Children",
+          images: [
+            {
+              src: "/images/nextgen/ChT/C0.jpg",
+              caption: "Design 1"
+            },
+            {
+              src: "/images/nextgen/ChT/C1.jpg",
+              caption: "Bridge 1"
+            },
+            {
+              src: "/images/nextgen/ChT/C2.jpg",
+              caption: "Test 1"
+            },
+            {
+              src: "/images/nextgen/ChT/C3.jpg",
+              caption: "Design and Bridge 2"
+            },
+            {
+              src: "/images/nextgen/ChT/C4.JPG",
+              caption: "Design and Bridge 3"
+            }
+          ]
+        },
+        {
+          title: "Program",
+          images: [
+            {
+              src: "/images/nextgen/program/ID0.JPG",
+              caption: "Initial Design 1"
+            },
+            {
+              src: "/images/nextgen/program/ID1.JPG",
+              caption: "Initial Design 2"
+            },
+            {
+              src: "/images/nextgen/program/ID2.JPG",
+              caption: "Initial Design 3"
+            },
+            {
+              src: "/images/nextgen/program/ID3.JPG",
+              caption: "Initial Design 4"
+            },
+            {
+              src: "/images/nextgen/program/IB1.JPG",
+              caption: "Building Bridge 1"
+            },
+            {
+              src: "/images/nextgen/program/IB2.JPG",
+              caption: "Building Bridge 2"
+            },
+            {
+              src: "/images/nextgen/program/IB3.JPG",
+              caption: "Building Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/IB4.JPG",
+              caption: "Building Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/B1.JPG",
+              caption: "First Bridge 1"
+            },
+            {
+              src: "/images/nextgen/program/B2.JPG",
+              caption: "First Bridge 2"
+            },
+            {
+              src: "/images/nextgen/program/B3.JPG",
+              caption: "First Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/B4.JPG",
+              caption: "First Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BK0.PNG",
+              caption: "Building Bridge Kit 1"
+            },
+            {
+              src: "/images/nextgen/program/BK1.PNG",
+              caption: "Building Bridge Kit 2"
+            },
+            {
+              src: "/images/nextgen/program/BK2.PNG",
+              caption: "Building Bridge Kit 3"
+            },
+            {
+              src: "/images/nextgen/program/BK3.PNG",
+              caption: "Building Bridge Kit 4"
+            },
+            {
+              src: "/images/nextgen/program/SB0.JPG",
+              caption: "Second Bridge 1"
+            },
+            {
+              src: "/images/nextgen/program/SB1.JPG",
+              caption: "Second Bridge 2"
+            },
+            {
+              src: "/images/nextgen/program/SB2.JPG",
+              caption: "Second Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/SB3.JPG",
+              caption: "Second Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/SB4.JPG",
+              caption: "Second Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/SB5.JPG",
+              caption: "Second Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BT0.JPG",
+              caption: "Testing Final Bridge 1"
+            },
+            {
+              src: "/images/nextgen/program/BT1.JPG",
+              caption: "Testing Final Bridge 1"
+            },
+            {
+              src: "/images/nextgen/program/BT2.JPG",
+              caption: "Testing Final Bridge 2"
+            },
+            {
+              src: "/images/nextgen/program/BT3.JPG",
+              caption: "Testing Final Bridge 2"
+            },
+            {
+              src: "/images/nextgen/program/BT4.JPG",
+              caption: "Testing Final Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/BT5.JPG",
+              caption: "Testing Final Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/BT6.JPG",
+              caption: "Testing Final Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/BT7.JPG",
+              caption: "Testing Final Bridge 3"
+            },
+            {
+              src: "/images/nextgen/program/BT8.JPG",
+              caption: "Testing Final Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BT9.JPG",
+              caption: "Testing Final Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BT10.JPG",
+              caption: "Testing Final Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BT11.JPG",
+              caption: "Testing Final Bridge 4"
+            },
+            {
+              src: "/images/nextgen/program/BT12.JPG",
+              caption: "Handing out Snacks :)"
+            },
+            {
+              src: "/images/nextgen/program/BT13.JPG",
+              caption: "Watching Sticker Making Process"
+            }
+          ]
+        }
+      ],
       links: [
         { label: "Curriculum", href: "/pdfs/NF.pdf" },
-        { label: "Photos", href: null }
+        { label: "Photos", href: "toggle-photos" }
       ]
     },
     {
@@ -100,9 +313,36 @@ const App = () => {
         "Programs & Impact: Lead comprehensive Startup Workshop series guiding students from initial ideation through MVP development. Actively support Innovation Challenge outreach through presentations, campus tabling, and classroom engagement."
       ],
       tags: ["Entrepreneurship", "Event Planning", "Workshop Development", "Student Leadership"],
+      photoGroups: [
+        {
+          title: "Flyers and Events Organized by the Startup Club",
+          images: [
+            {
+              src: "/images/startupclub/BAP.JPG",
+              caption: "Startup Club and Business and Entrepreneurship Club Leaders at the Bay Angels Pitch Event"
+            },
+            {
+              src: "/images/startupclub/BAP.PNG",
+              caption: "Live startup pitches to Bay Area investors"
+            },
+            {
+              src: "/images/startupclub/AGS.png",
+              caption: "Student Founder Guest Speaker on their Educational System for Students with Autism"
+            },
+            {
+              src: "/images/startupclub/LM.png",
+              caption: "Collaboration with student-led venture builder"
+            },
+            {
+              src: "/images/startupclub/S101.PNG",
+              caption: "Startup 101 Workshop Series"
+            }
+          ]
+        }
+      ],
       links: [
         { label: "Startup Workshop Series Flyers", href: "/pdfs/SWS.pdf" },
-        { label: "Photos", href: null }
+        { label: "Photos", href: "toggle-photos" }
       ]
     },
     {
