@@ -202,19 +202,19 @@ const App = () => {
               caption: "First Bridge 4"
             },
             {
-              src: "/images/nextgen/program/BK0.png",
+              src: "/images/nextgen/program/BK0.PNG",
               caption: "Building Bridge Kit 1"
             },
             {
-              src: "/images/nextgen/program/BK1.png",
+              src: "/images/nextgen/program/BK1.PNG",
               caption: "Building Bridge Kit 2"
             },
             {
-              src: "/images/nextgen/program/BK2.png",
+              src: "/images/nextgen/program/BK2.PNG",
               caption: "Building Bridge Kit 3"
             },
             {
-              src: "/images/nextgen/program/BK3.png",
+              src: "/images/nextgen/program/BK3.PNG",
               caption: "Building Bridge Kit 4"
             },
             {
@@ -313,6 +313,33 @@ const App = () => {
         "Programs & Impact: Lead comprehensive Startup Workshop series guiding students from initial ideation through MVP development. Actively support Innovation Challenge outreach through presentations, campus tabling, and classroom engagement."
       ],
       tags: ["Entrepreneurship", "Event Planning", "Workshop Development", "Student Leadership"],
+      photoGroups: [
+        {
+          title: "Flyers and Events Organized by the Startup Club",
+          images: [
+            {
+              src: "/images/startupclub/BAP.JPG",
+              caption: "Startup Club and Business and Entrepreneurship Club Leaders at the Bay Angels Pitch Event"
+            },
+            {
+              src: "/images/startupclub/BAP.PNG",
+              caption: "Live startup pitches to Bay Area investors"
+            },
+            {
+              src: "/images/startupclub/AGS.png",
+              caption: "Student Founder Guest Speaker on their Educational System for Students with Autism"
+            },
+            {
+              src: "/images/startupclub/LM.png",
+              caption: "Collaboration with student-led venture builder"
+            },
+            {
+              src: "/images/startupclub/S101.PNG",
+              caption: "Startup 101 Workshop Series"
+            }
+          ]
+        }
+      ],
       links: [
         { label: "Startup Workshop Series Flyers", href: "/pdfs/SWS.pdf" },
         { label: "Photos", href: "toggle-photos" }
