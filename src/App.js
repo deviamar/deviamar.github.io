@@ -302,7 +302,7 @@ const App = () => {
       ],
       links: [
         { label: "Curriculum", href: "/pdfs/NF.pdf" },
-        { label: "Photos", href: null }
+        { label: "Photos", href: "toggle-photos" }
       ]
     },
     {
