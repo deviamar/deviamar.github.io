@@ -30,8 +30,7 @@ const App = () => {
       description: "Designed and implemented a wearable sensor system for real-time gait analysis and movement pattern detection. The system uses IoT sensors and machine learning to provide insights for rehabilitation and health monitoring applications.",
       tags: ["Health Tech", "IoT", "Signal Processing", "Wearable Sensors"],
       links: [
-        { label: "Website", href: "https://superb-squirrel-498e3c.netlify.app/#features" },
-        { label: "GitHub", href: "https://github.com/deviamar/Elder-Ally" }
+        { label: "Website", href: "https://superb-squirrel-498e3c.netlify.app/#features" }
       ]
     },
     {
