@@ -19,9 +19,7 @@ const App = () => {
       tags: ["Robotics", "Bio-inspired Design", "CAD and 3D Printing", "MuJoCo Simulation"],
       links: [
         { label: "Paper", href: null },
-        { label: "Research Process", href: null },
-        { label: "Demo Video", href: null },
-        { label: "Code", href: null }
+        { label: "GitHub", href: "https://github.com/deviamar/BiRH" }
       ]
     },
     {
