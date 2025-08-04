@@ -542,13 +542,13 @@ const App = () => {
                 {/* Description */}
                 <div className="space-y-6 text-lg leading-relaxed text-gray-600 mb-4">
                   <p>
-                    Undergraduate student passionate about robotics research, entrepreneurship, and building real-world tools that improve lives.
+                    Undergraduate student committed to advancing robotics through impactful research and innovation rooted in real-world needs.
                   </p>
                   <p>
-                    Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait, earning a Judges Award at my college's research symposium. These projects challenged me to figure out the research and development process from the ground up: identifying meaningful problems, designing and prototyping solutions, integrating sensors, and iterating based on user needs. Along the way, I learned how to build connections, find mentors, and take initiative even without formal lab affiliation.
+                    Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait, earning a Judges Award at my college's research symposium. These projects challenged me to figure out the research and development process from the ground up: identifying meaningful problems, designing and prototyping solutions, and iterating based on user feedback. Along the way, I learned how to take initiative, build connections, and seek out mentorship.
                   </p>
                   <p>
-                    I'm currently diving deeper into computer vision and dexterous manipulation, and I'm eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
+                    I'm currently diving deeper into computer vision and dexterous manipulation and am eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
                   </p>
                 </div>
                 
