@@ -549,16 +549,13 @@ const App = () => {
                 {/* Description */}
                 <div className="space-y-6 text-lg leading-relaxed text-gray-600 mb-4">
                   <p>
-                    My favorite childhood activity was exploring the world around me, whether marveling at the rainbow patterns created by a crystal swan figurine or observing ants to decipher their navigational techniques. Taking my first physics class in grade 8, I was captivated by the concrete answers it offered. More advanced classes then crystallized physics as my pathway to understand our world while mathematics became my framework to numerically define and communicate these complex phenomena. 
+                    My favorite childhood activity was exploring the world around me, whether marveling at the rainbow patterns created by a crystal swan figurine or observing ants to decipher their navigational techniques. Through classes, I discovered physics was my pathway to understand our world while mathematics became my framework to numerically define and communicate these complex phenomena.
                   </p>
                   <p>
-                    Today, I’m most fascinated by how we can quantitatively express concepts that seem to defy numerical representation. A picture becomes an array of RGB values, an object becomes a 3 dimensional point cloud, and a person’s risk of falling becomes variation in their gait parameters. Having spent years exploring how to represent the world with numbers and understanding it through physics, I’m eager to apply both disciplines to the development of Robotics and AI, creating technologies that improve our lives by addressing real-world challenges. 
+                    Today, I’m most fascinated by how we can quantitatively express concepts that seem to defy numerical representation to train Robotics and AI. Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait to prevent falls in elderly adults, earning a Judges Award at my college's research symposium. These projects taught me to identify meaningful problems, engage with existing ideas by reading research papers, design and test solutions, seek out mentorship and collaboration, and navigate ambiguity by combining research, experimentation, and collaboration.
                   </p>
                   <p>
-                    Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait to prevent falls in elderly adults, earning a Judges Award at my college's research symposium. These projects taught me to identify meaningful problems, engage with existing ideas by reading research papers, design and test solutions, seek out mentorship and collaboration, and navigate ambiguity by combining research, experimentation, and collaboration.
-                  </p>
-                  <p>
-                    I'm currently diving deeper into computer vision, dexterous manipulation, and embedded systems and am eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
+                    I'm currently diving deeper into computer vision, dexterous manipulation, and embedded systems and am eager to collaborate with research labs, faculty, or startups at the intersection of robotics and health technology.
                   </p>
                 </div>
                 
