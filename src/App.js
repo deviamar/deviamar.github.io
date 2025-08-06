@@ -14,21 +14,21 @@ const App = () => {
   const projects = [
     {
       title: "Bio-Inspired Robotic Hand",
-      meta: "Research Project | 2024",
-      description: "Developed a bio-inspired robotic hand that mimics human finger movements and grip patterns. The project involved biomechanical analysis, actuator design, and control system implementation using machine learning algorithms for adaptive grasping.",
+      meta: "Research Project | 2024-5",
+      description: "I started this project with a simple question: how is the human hand so effective at grasping a wide range of objects, and how can we design a robotic hand that is simpler but still quite effective? I researched the biomechanics of the human hand, explored concepts like grasp stability, force closure, and reachability, and used those insights to design and test an initial 3D-printed prototype. Since then, I’ve set up a MuJoCo simulation environment to test how finger placement and degrees of freedom affect grasping performance, and am building a tendon-driven physical prototype.",
       tags: ["Robotics", "Bio-inspired Design", "CAD and 3D Printing", "MuJoCo Simulation"],
       links: [
-        { label: "Paper", href: null },
+        { label: "Explorations & Reflections", href: "/pdfs/BiRH.pdf"},
         { label: "GitHub", href: "https://github.com/deviamar/BiRH" }
       ]
     },
     {
-      title: "Smart Gait Detection System",
-      meta: "Health Technology | 2024",
-      description: "Designed and implemented a wearable sensor system for real-time gait analysis and movement pattern detection. The system uses IoT sensors and machine learning to provide insights for rehabilitation and health monitoring applications.",
-      tags: ["Health Tech", "IoT", "Signal Processing", "Wearable Sensors"],
+      title: "Elder Ally - Smart Gait Detection System",
+      meta: "Health Technology | 2024-5",
+      description: "Falls are the leading cause of injury in older adults, yet most solutions are reactive. With Elder Ally, we hope to take a proactive approach by tracking gait parameters to detect early signs of mobility decline. Built with an Arduino and IMU that attach directly to a cane, the device is affordable and passively records user data without requiring any no change in user behavior. To inform our design, we shadowed physical therapists at El Camino Hospital and were honored with the Judges Award (Top 5) at Foothill College’s Research and Service Leadership Symposium.",
+      tags: ["Health Tech", "Wearable Sensors", "IoT"],
       links: [
-        { label: "Website", href: "https://superb-squirrel-498e3c.netlify.app/#features" }
+        { label: "Website", href: "elder-ally.org" }
       ]
     },
     {
@@ -50,7 +50,7 @@ const App = () => {
       ]
     },
     {
-      title: "Quantum Physics: My First Dive into Physics",
+      title: "Quantum Physics Exploration",
       meta: "Genius Hour Project | 2017 | ISU",
       description: "I independently researched and wrote a 16-page paper exploring some of the most fascinating ideas in physics, from wave–particle duality and entanglement to time travel and the multiverse. While there were fundamental misunderstandings I’ve since corrected, the excitement of diving into these concepts and finding real-world analogies to make sense of them stayed with me. This project sparked a lifelong curiosity about physics and gave me early practice in reading scientific material and communicating complex ideas through writing.",
       tags: ["Quantum Physics", "Independent Learning", "Science Communication"],
@@ -509,6 +509,13 @@ const App = () => {
                 <p className="text-lg text-blue-500 mb-5 font-medium">
                   Robotics Researcher & Entrepreneur
                 </p>
+
+               {/* One Liner */}
+                <div className="space-y-6 text-lg leading-relaxed text-gray-600 mb-4">
+                  <p>
+                    Undergraduate student committed to advancing robotics through impactful research and innovation rooted in real-world needs.
+                  </p>
+                </div>
                 
                 {/* Social Icons */}
                 <div className="flex gap-4 mb-8 justify-center lg:justify-start">
@@ -542,13 +549,16 @@ const App = () => {
                 {/* Description */}
                 <div className="space-y-6 text-lg leading-relaxed text-gray-600 mb-4">
                   <p>
-                    Undergraduate student committed to advancing robotics through impactful research and innovation rooted in real-world needs.
+                    My favorite childhood activity was exploring the world around me, whether marveling at the rainbow patterns created by a crystal swan figurine or observing ants to decipher their navigational techniques. Taking my first physics class in grade 8, I was captivated by the concrete answers it offered. More advanced classes then crystallized physics as my pathway to understand our world while mathematics became my framework to numerically define and communicate these complex phenomena. 
                   </p>
                   <p>
-                    Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait, earning a Judges Award at my college's research symposium. These projects challenged me to figure out the research and development process from the ground up: identifying meaningful problems, designing and prototyping solutions, and iterating based on user feedback. Along the way, I learned how to take initiative, build connections, and seek out mentorship.
+                    Today, I’m most fascinated by how we can quantitatively express concepts that seem to defy numerical representation. A picture becomes an array of RGB values, an object becomes a 3 dimensional point cloud, and a person’s risk of falling becomes variation in their gait parameters. Having spent years exploring how to represent the world with numbers and understanding it through physics, I’m eager to apply both disciplines to the development of Robotics and AI, creating technologies that improve our lives by addressing real-world challenges. 
                   </p>
                   <p>
-                    I'm currently diving deeper into computer vision and dexterous manipulation and am eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
+                    Over the past year, I've led projects like a bio-inspired robotic hand and a smart cane attachment that analyzes gait to prevent falls in elderly adults, earning a Judges Award at my college's research symposium. These projects taught me to identify meaningful problems, engage with existing ideas by reading research papers, design and test solutions, seek out mentorship and collaboration, and navigate ambiguity by combining research, experimentation, and collaboration.
+                  </p>
+                  <p>
+                    I'm currently diving deeper into computer vision, dexterous manipulation, and embedded systems and am eager to collaborate with research labs, faculty, or startups at the intersection of robotics, healthcare, and embedded systems.
                   </p>
                 </div>
                 
