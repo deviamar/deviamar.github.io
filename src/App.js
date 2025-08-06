@@ -506,14 +506,14 @@ const App = () => {
                 <h1 className="text-4xl font-bold text-slate-700 mb-1 leading-tight">
                   Devi Amarsaikhan
                 </h1>
-                <p className="text-lg text-blue-500 mb-5 font-medium">
+                <p className="text-lg text-blue-500 mb-3 font-medium">
                   Robotics Researcher & Entrepreneur
                 </p>
 
                {/* One Liner */}
-                <div className="space-y-6 text-lg leading-relaxed text-gray-600 mb-4">
+                <div className="space-y-4 text-base leading-relaxed text-gray-600 mb-4">
                   <p>
-                    Undergraduate student committed to advancing robotics through impactful research and innovation rooted in real-world needs.
+                    Undergraduate student committed to advancing robotics through research and innovation rooted in real-world needs.
                   </p>
                 </div>
                 
