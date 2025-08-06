@@ -23,6 +23,15 @@ const App = () => {
       ]
     },
     {
+      title: "3D Object Reconstruction from Vision for Robot Grasping",
+      meta: "Research Project | 2025",
+      description: "After designing my initial robotic hand, I explored how computer vision could support grasping. Over a 10-week period, spending just one hour per week, I conducted a focused literature review and designed an imagined experiment to explore how computer vision models can estimate the 3D position and shape of an object from images. I compared three approaches single-image input, multi-view reconstruction, and transfer learning from pre-trained pose estimation models and evaluated by 3D position accuracy and shape similarity. From the literature, I learned that transfer learning from human hand pose estimation improves performance in manipulation tasks, and methods like SPARTN and H-InDex demonstrate that offline augmentation and pretrained representations can significantly boost learning efficiency and robustness. Special thanks to Chloe Trujillo for her mentorship through Stanford’s Science Small Groups program.",
+      tags: ["Computer Vision", "Literature Review"],
+      links: [
+        { label: "SSG Presentation", href: "/pdfs/SSG_CV.pdf"}
+      ]
+    },
+    {
       title: "Elder Ally - Smart Gait Detection System",
       meta: "Health Technology | 2024-5",
       description: "Falls are the leading cause of injury in older adults, yet most solutions are reactive. With Elder Ally, we hope to take a proactive approach by tracking gait parameters to detect early signs of mobility decline. Built with an Arduino and IMU that attach directly to a cane, the device is affordable and passively records user data without requiring any no change in user behavior. To inform our design, we shadowed physical therapists at El Camino Hospital and were honored with the Judges Award (Top 5) at Foothill College’s Research and Service Leadership Symposium.",
