@@ -466,6 +466,29 @@ const App = () => {
     }
   ];
 
+  const awards = [
+    {
+    title: "AI Coding Agents Hackathon @ Y Combinator – Finalist & Track Winner",
+    meta: "Hackathon | 2025",
+    description:
+      "In my first-ever hackathon, our team built FitForm Fitness: a wearable and computer vision system to improve athletic performance and prevent injury through real-time form feedback. Using YOLO for arm keypoints, MediaPipe for wrist angles, and an MPU6050 IMU sensor with Arduino, we developed a working prototype in just 8 hours. Selected as finalists, we pitched on stage at Y Combinator and won Best Use of Same.new, a tool to create web and mobile applications with just prompting.",
+    tags: ["Computer Vision", "Wearable Technology", "Arduino", "Hackathon"],
+    image: "/images/yc-hackathon-team.jpg",
+    image: "/images/yc-hackathon-demo.jpg"
+  },
+  {
+    title: "Elder Ally – Judges Award (Top 5 of 164 Projects)",
+    meta: "Assistive Technology | 2024–2025",
+    description:
+      "Elder Ally, a smart mobility attachment for canes and walkers, was awarded the Judges Award at the Research & Service Leadership Symposium, placing in the top 5 out of 164 projects. Designed to help older adults age in place, Elder Ally integrates sensors for gait detection, obstacle alerts, and usage tracking. The project combined embedded systems, LiDAR sensing, and human-centered design to address mobility challenges in older adults.",
+    tags: ["Assistive Technology", "Embedded Systems", "Sensor Integration", "Human-Centered Design"],
+    image: "/images/elder-ally.jpg",
+    links: [
+      { label: "Website", href: "elder-ally.org" }
+    ]
+  }
+  ];
+
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       {/* Navigation */}
@@ -745,6 +768,53 @@ const App = () => {
           </div>
         </section>
       )}
+
+      {/* Awards */}
+      {activeSection === 'awards' && (
+        <section className="min-h-screen pt-24 pb-12 px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-700 mb-4">Awards</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Celebrating milestones that highlight innovation and impact.
+              </p>
+            </div>
+            
+            <div className="space-y-8">
+              {projects.map((project, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl max-w-3xl mx-auto">
+                  <div className="mb-6">
+                    <h3 className="text-2xl font-bold text-slate-700 mb-2">{project.title}</h3>
+                    <p className="text-gray-500 text-sm mb-4">{project.meta}</p>
+                  </div>
+                  <p className="leading-relaxed mb-6 text-left">{project.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-4">
+                    {project.links.map((link, linkIndex) => (
+                      link.href ? (
+                        <a key={linkIndex} href={link.href} className="text-blue-500 font-semibold text-sm hover:underline">
+                          {link.label}
+                        </a>
+                      ) : (
+                        <span key={linkIndex} className="text-gray-400 font-semibold text-sm">
+                          {link.label}
+                        </span>
+                      )
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      
     </div>
   );
 };
