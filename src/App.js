@@ -484,7 +484,7 @@ const App = () => {
     description:
       "Elder Ally, a smart mobility attachment for canes and walkers, received the Judges Award at the Research & Service Leadership Symposium (Top 5/164). Designed to help older adults age in place, Elder Ally integrates sensors for gait detection, obstacle alerts, and usage tracking. The project combines embedded systems, LiDAR sensing, and human-centered design.",
     tags: ["Assistive Technology", "Embedded Systems", "Sensor Integration", "Human-Centered Design"],
-    image: "/images/awards/elder-ally.jpg",
+    image: "/images/elder-ally.jpg",
     links: [{ label: "Website", href: "https://elder-ally.org" }]
   },
   {
@@ -493,7 +493,7 @@ const App = () => {
     description:
       "My bio-inspired robotic hand project was recognized as a finalist at Foothill College’s RSLS. I explored human hand biomechanics to inform simpler yet capable robotic hand designs, iterating via CAD/3D printing, MuJoCo simulation, and tendon-driven actuation.",
     tags: ["Robotics", "Bio-inspired Design", "CAD and 3D Printing", "MuJoCo Simulation"],
-    image: "/images/awards/rsls.jpg",
+    image: "/images/rsls.jpg",
     links: [
       { label: "Explorations & Reflections", href: "/pdfs/BiRH.pdf" },
       { label: "GitHub", href: "https://github.com/deviamar/BiRH" }
