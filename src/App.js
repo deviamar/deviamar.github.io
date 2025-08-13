@@ -804,18 +804,18 @@ const App = () => {
               <p className="text-gray-500 text-sm mb-4">{award.meta}</p>
             </div>
 
-            {/* Image (supports single image or images[0]) */}
+            {/* Fixed image rendering */}
             {award.image && (
               <img
                 src={award.image}
-                alt={`${award.title} photo`}
+                alt={award.alt || `${award.title} award`}
                 className="w-full rounded-lg mb-4 object-cover max-h-72"
               />
             )}
             {award.images?.length > 0 && !award.image && (
               <img
                 src={award.images[0]}
-                alt={`${award.title} photo`}
+                alt={award.alt || `${award.title} award`}
                 className="w-full rounded-lg mb-4 object-cover max-h-72"
               />
             )}
@@ -856,7 +856,7 @@ const App = () => {
     </div>
   </section>
 )}
-    </div>
+        </div>
   );
 };
 
