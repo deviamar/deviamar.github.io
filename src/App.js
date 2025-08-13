@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
 import { Mail, Linkedin, Github } from 'lucide-react';
 
@@ -37,7 +36,7 @@ const App = () => {
       description: "Falls are the leading cause of injury in older adults, yet most solutions are reactive. With Elder Ally, we hope to take a proactive approach by tracking gait parameters to detect early signs of mobility decline. Built with an Arduino and IMU that attach directly to a cane, the device is affordable and passively records user data without requiring any no change in user behavior. To inform our design, we shadowed physical therapists at El Camino Hospital and were honored with the Judges Award (Top 5) at Foothill College’s Research and Service Leadership Symposium.",
       tags: ["Health Tech", "Wearable Sensors", "IoT"],
       links: [
-        { label: "Website", href: "elder-ally.org" }
+        { label: "Website", href: "https://elder-ally.org" }
       ]
     },
     {
@@ -474,6 +473,7 @@ const App = () => {
       "In my first-ever hackathon, our team built FitForm Fitness — a wearable + computer vision system to improve athletic performance and prevent injury through real-time form feedback. Using YOLO for arm keypoints, MediaPipe for wrist angles, and an MPU6050 IMU sensor with Arduino, we developed a working prototype in just 8 hours. Selected as finalists, we pitched on stage at Y Combinator and won Best Use of Same.new.",
     tags: ["Computer Vision", "Wearable Technology", "Arduino", "Hackathon"],
     images: ["/images/yc-hackathon-team.jpg", "/images/yc-hackathon-demo.jpg"],
+    alt: "FitForm Fitness prototype demo on stage at Y Combinator",
     links: [
       { label: "Recap Post", href: "LINK_TO_RECAP" },
       { label: "Project Repository", href: "LINK_TO_GITHUB" }
