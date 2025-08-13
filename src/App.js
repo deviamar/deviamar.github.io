@@ -475,8 +475,7 @@ const App = () => {
     images: ["/images/yc-hackathon-team.jpg", "/images/yc-hackathon-demo.jpg"],
     alt: "FitForm Fitness prototype demo on stage at Y Combinator",
     links: [
-      { label: "Recap Post", href: "LINK_TO_RECAP" },
-      { label: "Project Repository", href: "LINK_TO_GITHUB" }
+      { label: "Recap Post", href: "https://www.linkedin.com/feed/update/urn:li:activity:7360747136486944768/" }
     ]
   },
   {
