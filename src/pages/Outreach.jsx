@@ -7,46 +7,46 @@ export default function Outreach() {
     {
       title: "NextGEN Innovators Club",
       meta: "Founder & President | Sept 2024 – July 2025",
-      image: "/web-ui/images/nextgen/polaroid.jpg",
+      image: "/images/nextgen/polaroid.jpg",
       description:
         "Founded and led a club teaching underserved students the engineering design process through hands-on bridge-building projects. Completed a seven-week after-school program with 16 students and expanded to multiple local schools.",
       tags: ["STEM Education", "Mentorship", "Engineering Design"],
-      links: [{ label: "Curriculum", href: "/web-ui/pdfs/NF.pdf" }],
+      links: [{ label: "Curriculum", href: "/pdfs/NF.pdf" }],
       photoGroups: [
         {
           title: "Bridges Designed and Built by BEC Club Members",
           images: [
-            { src: "/web-ui/images/nextgen/BEC/B0.JPG", caption: "Design 1" },
-            { src: "/web-ui/images/nextgen/BEC/B1.JPG", caption: "Bridge 1" },
-            { src: "/web-ui/images/nextgen/BEC/B2.JPG", caption: "Design 2" },
-            { src: "/web-ui/images/nextgen/BEC/B3.JPG", caption: "Bridge 2" },
-            { src: "/web-ui/images/nextgen/BEC/B4.JPG", caption: "Design 3" },
-            { src: "/web-ui/images/nextgen/BEC/B5.JPG", caption: "Bridge 3" },
-            { src: "/web-ui/images/nextgen/BEC/B6.JPG", caption: "Design 4" },
-            { src: "/web-ui/images/nextgen/BEC/B7.JPG", caption: "Bridge 4" },
+            { src: "/images/nextgen/BEC/B0.JPG", caption: "Design 1" },
+            { src: "/images/nextgen/BEC/B1.JPG", caption: "Bridge 1" },
+            { src: "/images/nextgen/BEC/B2.JPG", caption: "Design 2" },
+            { src: "/images/nextgen/BEC/B3.JPG", caption: "Bridge 2" },
+            { src: "/images/nextgen/BEC/B4.JPG", caption: "Design 3" },
+            { src: "/images/nextgen/BEC/B5.JPG", caption: "Bridge 3" },
+            { src: "/images/nextgen/BEC/B6.JPG", caption: "Design 4" },
+            { src: "/images/nextgen/BEC/B7.JPG", caption: "Bridge 4" },
           ],
         },
         {
           title: "Bridges Designed and Built by Children",
           images: [
-            { src: "/web-ui/images/nextgen/ChT/C0.jpg", caption: "Design 1" },
-            { src: "/web-ui/images/nextgen/ChT/C1.jpg", caption: "Bridge 1" },
-            { src: "/web-ui/images/nextgen/ChT/C2.jpg", caption: "Test 1" },
-            { src: "/web-ui/images/nextgen/ChT/C3.jpg", caption: "Design and Bridge 2" },
-            { src: "/web-ui/images/nextgen/ChT/C4.JPG", caption: "Design and Bridge 3" },
+            { src: "/images/nextgen/ChT/C0.jpg", caption: "Design 1" },
+            { src: "/images/nextgen/ChT/C1.jpg", caption: "Bridge 1" },
+            { src: "/images/nextgen/ChT/C2.jpg", caption: "Test 1" },
+            { src: "/images/nextgen/ChT/C3.jpg", caption: "Design and Bridge 2" },
+            { src: "/images/nextgen/ChT/C4.JPG", caption: "Design and Bridge 3" },
           ],
         },
         {
           title: "Program Progress",
           images: [
-            { src: "/web-ui/images/nextgen/program/ID0.JPG", caption: "Initial Design 1" },
-            { src: "/web-ui/images/nextgen/program/IB1.JPG", caption: "Building Bridge 1" },
-            { src: "/web-ui/images/nextgen/program/B1.JPG", caption: "First Bridge 1" },
-            { src: "/web-ui/images/nextgen/program/BK0.png", caption: "Building Kit 1" },
-            { src: "/web-ui/images/nextgen/program/SB0.JPG", caption: "Second Bridge 1" },
-            { src: "/web-ui/images/nextgen/program/BT0.JPG", caption: "Testing Final Bridge 1" },
-            { src: "/web-ui/images/nextgen/program/BT12.JPG", caption: "Handing out Snacks :)" },
-            { src: "/web-ui/images/nextgen/program/BT13.JPG", caption: "Watching Sticker Making" },
+            { src: "/images/nextgen/program/ID0.JPG", caption: "Initial Design 1" },
+            { src: "/images/nextgen/program/IB1.JPG", caption: "Building Bridge 1" },
+            { src: "/images/nextgen/program/B1.JPG", caption: "First Bridge 1" },
+            { src: "/images/nextgen/program/BK0.png", caption: "Building Kit 1" },
+            { src: "/images/nextgen/program/SB0.JPG", caption: "Second Bridge 1" },
+            { src: "/images/nextgen/program/BT0.JPG", caption: "Testing Final Bridge 1" },
+            { src: "/images/nextgen/program/BT12.JPG", caption: "Handing out Snacks :)" },
+            { src: "/images/nextgen/program/BT13.JPG", caption: "Watching Sticker Making" },
           ],
         },
       ],
@@ -54,7 +54,7 @@ export default function Outreach() {
     {
   title: "Startup Club at Foothill College",
   meta: "Co-Founder & Co-President | Jan 2025 – Jun 2025",
-  image: "/web-ui/images/startupclub/BAP.JPG",
+  image: "/images/startupclub/BAP.JPG",
   description:
     "Taught students the fundamentals of startups and innovation through workshops, founder talks, and pitch events. Organized two major events with 140+ attendees and led the Startup 101 workshop series guiding students from idea to MVP.",
   tags: ["Entrepreneurship", "Event Planning", "Student Leadership"],
@@ -64,25 +64,25 @@ export default function Outreach() {
       title: "Flyers and Events Organized by the Startup Club",
       images: [
         {
-          src: "/web-ui/images/startupclub/BAP.JPG",
+          src: "/images/startupclub/BAP.JPG",
           caption:
             "Startup Club and Business and Entrepreneurship Club Leaders at the Bay Angels Pitch Event",
         },
         {
-          src: "/web-ui/images/startupclub/BAP.png",
+          src: "/images/startupclub/BAP.png",
           caption: "Live startup pitches to Bay Area investors",
         },
         {
-          src: "/web-ui/images/startupclub/AGS.png",
+          src: "/images/startupclub/AGS.png",
           caption:
             "Student Founder Guest Speaker on their Educational System for Students with Autism",
         },
         {
-          src: "/web-ui/images/startupclub/LM.png",
+          src: "/images/startupclub/LM.png",
           caption: "Collaboration with student-led venture builder",
         },
         {
-          src: "/web-ui/images/startupclub/S101.PNG",
+          src: "/images/startupclub/S101.PNG",
           caption: "Startup 101 Workshop Series",
         },
       ],
@@ -92,43 +92,43 @@ export default function Outreach() {
 {
       title: "B-KOA STEM Outreach Nonprofit",
       meta: "Board Member & Treasurer | Apr 2025 – Present",
-      image: "/web-ui/images/bkoa.jpg",
+      image: "/images/bkoa.jpg",
       description:
         "Serve on the Bay Area branch of JKOA to develop accessible STEM curricula for elementary students. Support program design, financial management, and community partnerships to expand outreach across schools.",
       tags: ["STEM Education", "Program Development", "Nonprofit Leadership"],
       links: [
-        { label: "Brochure", href: "/web-ui/pdfs/JKOA-B.pdf" },
-        { label: "Origin Doc", href: "/web-ui/pdfs/JKOA-O.pdf" },
+        { label: "Brochure", href: "/pdfs/JKOA-B.pdf" },
+        { label: "Origin Doc", href: "/pdfs/JKOA-O.pdf" },
       ],
     },
     {
       title: "Dolma Ling Soup Kitchen Greenhouse Initiative",
       meta: "Founder & President | 2019 | ISU",
-      image: "/web-ui/images/greenhouse/fundraising/C0.jpg",
+      image: "/images/greenhouse/fundraising/C0.jpg",
       description:
         "Founded a student club that raised funds for two greenhouses to provide sustainable produce for a local soup kitchen. Coordinated 11 volunteers, 293 donors, and full installation of irrigation and camera systems.",
       tags: ["Community Service", "Sustainability", "Leadership"],
       links: [
-        { label: "Publication", href: "/web-ui/pdfs/GH.pdf" },
+        { label: "Publication", href: "/pdfs/GH.pdf" },
       ],
       photoGroups: [
   {
     title: "Fundraising and Club",
     images: [
       {
-        src: "/web-ui/images/greenhouse/fundraising/C0.jpg",
+        src: "/images/greenhouse/fundraising/C0.jpg",
         caption: "Club members creating handmade jewelry for fundraising",
       },
       {
-        src: "/web-ui/images/greenhouse/fundraising/C1.JPG",
+        src: "/images/greenhouse/fundraising/C1.JPG",
         caption: "Jewelry materials",
       },
       {
-        src: "/web-ui/images/greenhouse/fundraising/C2.JPG",
+        src: "/images/greenhouse/fundraising/C2.JPG",
         caption: "Sample receipt",
       },
       {
-        src: "/web-ui/images/greenhouse/fundraising/C4.JPG",
+        src: "/images/greenhouse/fundraising/C4.JPG",
         caption:
           "Group photo with DLSK staff, school faculty, and our club members celebrating first harvest!",
       },
@@ -137,28 +137,28 @@ export default function Outreach() {
   {
     title: "Building the Greenhouse",
     images: [
-      { src: "/web-ui/images/greenhouse/building/B0.jpg" },
-      { src: "/web-ui/images/greenhouse/building/B1.jpg" },
-      { src: "/web-ui/images/greenhouse/building/B2.jpg" },
+      { src: "/images/greenhouse/building/B0.jpg" },
+      { src: "/images/greenhouse/building/B1.jpg" },
+      { src: "/images/greenhouse/building/B2.jpg" },
     ],
   },
   {
     title: "Equipment",
     images: [
       {
-        src: "/web-ui/images/greenhouse/equipment/E0.jpg",
+        src: "/images/greenhouse/equipment/E0.jpg",
         caption: "Equipment to Plant Vegetables",
       },
       {
-        src: "/web-ui/images/greenhouse/equipment/E1.jpg",
+        src: "/images/greenhouse/equipment/E1.jpg",
         caption: "Camera for Security",
       },
       {
-        src: "/web-ui/images/greenhouse/equipment/E2.jpg",
+        src: "/images/greenhouse/equipment/E2.jpg",
         caption: "Camera System",
       },
       {
-        src: "/web-ui/images/greenhouse/equipment/E3.jpg",
+        src: "/images/greenhouse/equipment/E3.jpg",
         caption: "Watering System",
       },
     ],
@@ -166,28 +166,28 @@ export default function Outreach() {
   {
     title: "Harvest",
     images: [
-      { src: "/web-ui/images/greenhouse/harvest/H1.jpeg" },
-      { src: "/web-ui/images/greenhouse/harvest/H2.jpeg" },
-      { src: "/web-ui/images/greenhouse/harvest/H3.jpeg" },
-      { src: "/web-ui/images/greenhouse/harvest/H4.jpeg" },
-      { src: "/web-ui/images/greenhouse/harvest/H5.jpeg" },
-      { src: "/web-ui/images/greenhouse/harvest/H6.jpg" },
-      { src: "/web-ui/images/greenhouse/harvest/H7.jpg" },
+      { src: "/images/greenhouse/harvest/H1.jpeg" },
+      { src: "/images/greenhouse/harvest/H2.jpeg" },
+      { src: "/images/greenhouse/harvest/H3.jpeg" },
+      { src: "/images/greenhouse/harvest/H4.jpeg" },
+      { src: "/images/greenhouse/harvest/H5.jpeg" },
+      { src: "/images/greenhouse/harvest/H6.jpg" },
+      { src: "/images/greenhouse/harvest/H7.jpg" },
     ],
   },
   {
     title: "Serving",
     images: [
       {
-        src: "/web-ui/images/greenhouse/serving/S0.jpg",
+        src: "/images/greenhouse/serving/S0.jpg",
         caption: "Vegetables",
       },
       {
-        src: "/web-ui/images/greenhouse/serving/S1.jpg",
+        src: "/images/greenhouse/serving/S1.jpg",
         caption: "Salad",
       },
       {
-        src: "/web-ui/images/greenhouse/serving/S2.jpg",
+        src: "/images/greenhouse/serving/S2.jpg",
         caption: "Serving the Food!",
       },
     ],
