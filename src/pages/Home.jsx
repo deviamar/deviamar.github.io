@@ -8,7 +8,7 @@ export default function Home() {
     <div className="animate-gradient min-h-screen pt-32 pb-24 px-8 text-gray-700">
       <div className="max-w-5xl mx-auto text-center">
         <img
-          src="/web-ui/Devi_Headshot.jpg"
+          src="/Devi_Headshot.jpg"
           alt="Devi"
           className="w-40 h-40 mx-auto rounded-full border-4 border-gray-200 shadow-lg mb-6"
         />
@@ -63,25 +63,25 @@ export default function Home() {
         <SnapshotSection
           title="Research Highlights"
           items={[
-            { title: 'Bio-Inspired Robotic Hand', desc: 'Designing a tendon-driven hand for adaptive manipulation.', image: '/web-ui/images/home/BiRH.png' },
-            { title: '3D Vision Reconstruction', desc: 'Exploring how perception enables robot grasping.', image: '/web-ui/images/home/3D.png' },
-            { title: 'Elder Ally', desc: 'Smart mobility device for early gait anomaly detection.', image: '/web-ui/images/home/SCA.jpg' },
+            { title: 'Bio-Inspired Robotic Hand', desc: 'Designing a tendon-driven hand for adaptive manipulation.', image: '/images/home/BiRH.png' },
+            { title: '3D Vision Reconstruction', desc: 'Exploring how perception enables robot grasping.', image: '/images/home/3D.png' },
+            { title: 'Elder Ally', desc: 'Smart mobility device for early gait anomaly detection.', image: '/images/home/SCA.jpg' },
           ]}
           link="/research"
         />
         <SnapshotSection
           title="Outreach & Mentorship"
           items={[
-            { title: 'NextGEN Innovators Club', desc: 'Teaching underrepresented students engineering through design.', image: '/web-ui/images/home/NGI.JPG' },
-            { title: 'Startup Club', desc: 'Introducing students to startups through workshops and pitch events.', image: '/web-ui/images/home/FHSC.jpeg' },
+            { title: 'NextGEN Innovators Club', desc: 'Teaching underrepresented students engineering through design.', image: '/images/home/NGI.JPG' },
+            { title: 'Startup Club', desc: 'Introducing students to startups through workshops and pitch events.', image: '/images/home/FHSC.jpeg' },
           ]}
           link="/outreach"
         />
         <SnapshotSection
           title="Awards"
           items={[
-            { title: 'AI Coding Agents Finalist', desc: 'YC Hackathon finalist for AI-powered wearable system.', image: '/web-ui/images/yc-hackathon-team.jpg' },
-            { title: 'Judges Award — Elder Ally', desc: 'Top 5 / 164 projects at Foothill Research Symposium.', image: '/web-ui/images/home/RSLS.jpg' },
+            { title: 'AI Coding Agents Finalist', desc: 'YC Hackathon finalist for AI-powered wearable system.', image: '/images/yc-hackathon-team.jpg' },
+            { title: 'Judges Award — Elder Ally', desc: 'Top 5 / 164 projects at Foothill Research Symposium.', image: '/images/home/RSLS.jpg' },
           ]}
           link="/awards"
         />
