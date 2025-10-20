@@ -5,7 +5,7 @@ export default function Awards() {
     {
       title: "AI Coding Agents Hackathon @ Y Combinator",
       meta: "Finalist & Track Winner | 2025",
-      image: "/web-ui/images/yc-hackathon-team.jpg",
+      image: "/images/yc-hackathon-team.jpg",
       description:
         "Built FitForm Fitness — a wearable + computer vision system that provides real-time form feedback to improve athletic performance and prevent injury. Pitched live at Y Combinator and won Best Use of Same.new.",
       tags: ["Computer Vision", "Wearable Tech", "Arduino", "Hackathon"],
@@ -19,7 +19,7 @@ export default function Awards() {
     {
       title: "Elder Ally – Judges Award (Top 5 / 164 Projects)",
       meta: "Assistive Technology | 2024-25",
-      image: "/web-ui/images/home/RSLS.jpg",
+      image: "/images/home/RSLS.jpg",
       description:
         "Smart mobility attachment for canes and walkers recognized for innovation at Foothill’s Research & Service Leadership Symposium. Combines LiDAR and IMU sensing for gait analysis and obstacle detection.",
       tags: [
@@ -33,7 +33,7 @@ export default function Awards() {
     {
       title: "Research & Service Leadership Symposium Finalist",
       meta: "Research Project | 2024-25",
-      image: "/web-ui/images/rsls.jpg",
+      image: "/images/rsls.jpg",
       description:
         "Recognized for the Bio-Inspired Robotic Hand project, exploring simplified yet capable underactuated designs through CAD and MuJoCo simulation.",
       tags: ["Robotics", "Bio-Inspired Design", "Simulation"],
