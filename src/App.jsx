@@ -8,7 +8,7 @@ import Awards from './pages/Awards';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+     <div className="animate-gradient min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
