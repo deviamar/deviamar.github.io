@@ -5,7 +5,7 @@ export default function Research() {
     {
       title: "Bio-Inspired Robotic Hand",
       meta: "Research Project | 2024-25",
-      image: "/web-ui/images/home/BiRH.png",
+      image: "/images/home/BiRH.png",
       description:
         "Designing a tendon-driven robotic hand inspired by human biomechanics. Explored grasp stability, reachability, and tendon routing using MuJoCo simulation and 3D-printed prototypes.",
       tags: [
@@ -21,18 +21,18 @@ export default function Research() {
     {
       title: "3D Object Reconstruction for Robot Grasping",
       meta: "Literature Review | 2025",
-      image: "/web-ui/images/home/3D.png",
+      image: "/images/home/3D.png",
       description:
         "Studied how computer vision can infer 3D shape and position for grasping tasks. Compared single-view, multi-view, and transfer-learning approaches to evaluate accuracy and shape fidelity.",
       tags: ["Computer Vision", "Literature Review"],
       links: [
-        { label: "SSG Presentation", href: "/web-ui/pdfs/SSG_CV.pdf" },
+        { label: "SSG Presentation", href: "/pdfs/SSG_CV.pdf" },
       ],
     },
     {
       title: "Elder Ally – Smart Gait Detection System",
       meta: "Health Technology | 2024-25",
-      image: "/web-ui/images/home/SCA.jpg",
+      image: "/images/home/SCA.jpg",
       description:
         "Developed an Arduino- and IMU-based cane attachment to monitor gait parameters for early mobility-decline detection. Honored with Judges Award (Top 5) at Foothill’s Research Symposium.",
       tags: ["Health Tech", "Wearable Sensors", "IoT"],
@@ -43,11 +43,11 @@ export default function Research() {
     {
       title: "Exploring Lattice-Point Geometry",
       meta: "Advanced Math Seminar | 2023",
-      image: "/web-ui/images/LPG.png",
+      image: "/images/LPG.png",
       description:
         "Proved theorems such as Pick’s, Blichfeldt’s, and Minkowski’s using techniques from linear algebra and number theory, deepening understanding of geometry of numbers.",
       tags: ["Mathematics", "Proof Writing", "LaTeX"],
-      links: [{ label: "Portfolio", href: "/web-ui/pdfs/LPG.pdf" }],
+      links: [{ label: "Portfolio", href: "/pdfs/LPG.pdf" }],
     },
   ];
 
