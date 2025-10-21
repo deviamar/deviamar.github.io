@@ -89,18 +89,6 @@ export default function Outreach() {
     },
   ],
 },
-{
-      title: "B-KOA STEM Outreach Nonprofit",
-      meta: "Board Member & Treasurer | Apr 2025 – Present",
-      image: "/images/bkoa.jpg",
-      description:
-        "Serve on the Bay Area branch of JKOA to develop accessible STEM curricula for elementary students. Support program design, financial management, and community partnerships to expand outreach across schools.",
-      tags: ["STEM Education", "Program Development", "Nonprofit Leadership"],
-      links: [
-        { label: "Brochure", href: "/pdfs/JKOA-B.pdf" },
-        { label: "Origin Doc", href: "/pdfs/JKOA-O.pdf" },
-      ],
-    },
     {
       title: "Dolma Ling Soup Kitchen Greenhouse Initiative",
       meta: "Founder & President | 2019 | ISU",
