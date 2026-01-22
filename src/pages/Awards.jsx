@@ -3,11 +3,24 @@ import React from "react";
 export default function Awards() {
   const awards = [
     {
+      title: "Stack Auth AI Hackathon (YC S24)",
+      meta: "2nd Place | 2025",
+      image: "/images/stackauth-hackathon.jpeg",
+      description:
+        "Placed 2nd out of 10 invited teams for building Orbit: a full-stack AI platform for event discovery and organizer analytics using Stack Auth's authentication and RBAC APIs.",
+      tags: ["Full-Stack", "AI", "Auth & RBAC", "Hackathon"],
+      links: [
+        {
+          label: "LinkedIn Recap",
+          href: "https://www.linkedin.com/feed/update/urn:li:activity:7375968404886896640/",
+        },
+      ],
+    },{
       title: "AI Coding Agents Hackathon @ Y Combinator",
       meta: "Finalist & Track Winner | 2025",
       image: "/images/yc-hackathon-team.jpg",
       description:
-        "Built FitForm Fitness — a wearable + computer vision system that provides real-time form feedback to improve athletic performance and prevent injury. Pitched live at Y Combinator and won Best Use of Same.new.",
+        "Built FitForm Fitness: a wearable + computer vision system that provides real-time form feedback to improve athletic performance and prevent injury. Pitched live at Y Combinator and won Best Use of Same.new.",
       tags: ["Computer Vision", "Wearable Tech", "Arduino", "Hackathon"],
       links: [
         {
@@ -17,7 +30,7 @@ export default function Awards() {
       ],
     },
     {
-      title: "Elder Ally – Judges Award (Top 5 / 164 Projects)",
+      title: "Elder Ally: Judges Award (Top 5 / 164 Projects)",
       meta: "Assistive Technology | 2024-25",
       image: "/images/home/RSLS.jpg",
       description:

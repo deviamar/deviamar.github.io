@@ -41,6 +41,19 @@ export default function Research() {
       ],
     },
     {
+    title: "ELLA (English Language Learning Assistant)",
+    meta: "Human-Centered Research | 2024",
+    image: "/images/home/ella.png", // <- change to your actual asset path
+    description:
+      "Conducted user research with international/ESL students and instructors to identify barriers to speaking confidence and consistent practice. Synthesized findings into a human-centered concept for an adaptive, low-pressure conversational learning assistant.",
+    tags: ["HCI", "User Research", "GenAI", "Education"],
+    links: [
+      { label: "Project Overview", href: "/research/ella" },
+      { label: "RSL Poster (PDF)", href: "/pdfs/ELLA_RSL_Poster.pdf" }, // <- update filename
+      { label: "GitHub", href: "https://github.com/deviamar/ella" }, // <- update repo URL
+    ],
+  },
+    {
       title: "Exploring Lattice-Point Geometry",
       meta: "Advanced Math Seminar | 2023",
       image: "/images/LPG.png",
