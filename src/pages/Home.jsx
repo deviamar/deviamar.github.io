@@ -64,26 +64,9 @@ export default function Home() {
           title="Research Highlights"
           items={[
             { title: 'Bio-Inspired Robotic Hand', desc: 'Designing a tendon-driven hand for adaptive manipulation.', image: '/images/home/BiRH.png' },
-            { title: '3D Vision Reconstruction', desc: 'Exploring how perception enables robot grasping.', image: '/images/home/3D.png' },
             { title: 'Elder Ally', desc: 'Smart mobility device for early gait anomaly detection.', image: '/images/home/SCA.jpg' },
           ]}
           link="/research"
-        />
-        <SnapshotSection
-          title="Outreach & Mentorship"
-          items={[
-            { title: 'NextGEN Innovators Club', desc: 'Teaching underrepresented students engineering through design.', image: '/images/home/NGI.JPG' },
-            { title: 'Startup Club', desc: 'Introducing students to startups through workshops and pitch events.', image: '/images/home/FHSC.jpeg' },
-          ]}
-          link="/outreach"
-        />
-        <SnapshotSection
-          title="Awards"
-          items={[
-            { title: 'AI Coding Agents Finalist', desc: 'YC Hackathon finalist for AI-powered wearable system.', image: '/images/yc-hackathon-team.jpg' },
-            { title: 'Judges Award — Elder Ally', desc: 'Top 5 / 164 projects at Foothill Research Symposium.', image: '/images/home/RSLS.jpg' },
-          ]}
-          link="/awards"
         />
       </div>
     </div>
