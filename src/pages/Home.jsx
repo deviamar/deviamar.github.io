@@ -73,7 +73,7 @@ export default function Home() {
               role="Undergraduate Researcher"
               org="UC Davis"
               dates="2025–present"
-              links={[{ label: "", to: "/research" }]}
+              //links={[{ label: "", to: "/research" }]}
               desc="Contributing to the ALOHA bimanual manipulation and active vision platform by improving kinematics and low-latency WebRTC streaming, while supporting development of learning-based world models for mobile manipulation."
             />
 
@@ -84,7 +84,7 @@ export default function Home() {
               org="Foothill College"
               dates="2024–25"
               award="Finalist (Top 20), Research & Service Leadership Symposium (RSLS)"
-              links={[{ label: "Project Overview", to: "/research/birh" }, { label: "GitHub", to: "https://github.com/deviamar/BiRH" }]}
+              //links={[{ label: "Project Overview", to: "/research/birh" }, { label: "GitHub", to: "https://github.com/deviamar/BiRH" }]}
               desc="Explored dexterous manipulation through a tendon-driven robotic hand, emphasizing grasp stability and tendon routing using MuJoCo simulation with UR10e validation."
             />
 
@@ -95,7 +95,7 @@ export default function Home() {
               org="Foothill College"
               dates="2024–25"
               award="Judges Award (Top 5/164), Research & Service Leadership Symposium (RSLS)"
-              links={[{ label: "Project Overview", to: "/research/pga" }]}
+              //links={[{ label: "Project Overview", to: "/research/pga" }]}
               desc="Led development of an IMU-based mobility sensing system exploring cane vs. foot placement tradeoffs, informed by clinical shadowing."
             />
           </div>
