@@ -12,7 +12,7 @@ import ELLAPage from "/research/ella.tsx";
 
 export default function App() {
   return (
-     <div className="animate-gradient min-h-screen">
+     <div className="animate-gradient">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

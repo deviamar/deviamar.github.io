@@ -5,12 +5,38 @@ const Section: React.FC<{
   title: string;
   children: React.ReactNode;
   id?: string;
-}> = ({ title, children, id }) => (
-  <section id={id} style={{ marginTop: "2.5rem" }}>
-    <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.75rem" }}>
-      {title}
-    </h2>
-    <div style={{ lineHeight: 1.65, fontSize: "1.02rem" }}>{children}</div>
+  right?: string;
+}> = ({ title, children, id, right }) => (
+  <section id={id} style={{ marginTop: "3rem", marginBottom: "3rem" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "baseline",
+        marginBottom: "1rem",
+      }}
+    >
+      <h2 style={{ fontSize: "1.5rem", fontWeight: 700 }}>
+        {title}
+      </h2>
+      {right && (
+        <span style={{ fontSize: "0.85rem", color: "#666" }}>
+          {right}
+        </span>
+      )}
+    </div>
+
+    <div
+      style={{
+        lineHeight: 1.65,
+        fontSize: "1.02rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem", // vertical space between paragraphs
+      }}
+    >
+      {children}
+    </div>
   </section>
 );
 
@@ -26,6 +52,75 @@ const Subsection: React.FC<{
   </div>
 );
 
+const Figure: React.FC<{
+  src: string;
+  alt: string;
+  caption?: string;
+}> = ({ src, alt, caption }) => (
+  <figure style={{ margin: "1.25rem 0 0 0" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "375px",              // controls visible height
+        overflow: "hidden",
+        borderRadius: 14,
+        border: "1px solid rgba(255,255,255,0.12)",
+      }}
+    >
+      <img
+        src={src}
+        alt={alt}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",         // crops top & bottom
+          objectPosition: "center 35%", // adjust if needed
+        }}
+        loading="lazy"
+      />
+    </div>
+
+    {caption && (
+      <figcaption style={{ marginTop: "0.6rem", fontSize: "1.2rem", color: "rgba(0,0,0,0.65)", textAlign: "center", }}>
+        {caption}
+      </figcaption>
+    )}
+  </figure>
+);
+
+const FullFigure: React.FC<{
+  src: string;
+  alt: string;
+  caption?: string;
+}> = ({ src, alt, caption }) => (
+  <figure style={{ margin: "1.25rem 0 0 0" }}>
+    <img
+      src={src}
+      alt={alt}
+      style={{
+        width: "100%",
+        borderRadius: 14,
+        border: "1px solid rgba(255,255,255,0.12)",
+      }}
+      loading="lazy"
+    />
+
+    {caption && (
+      <figcaption
+        style={{
+          marginTop: "0.6rem",
+          fontSize: "0.9rem",
+          color: "#555",
+          textAlign: "center",
+        }}
+      >
+        {caption}
+      </figcaption>
+    )}
+  </figure>
+);
+
+
 const BulletList: React.FC<{ items: string[] }> = ({ items }) => (
   <ul style={{ paddingLeft: "1.2rem", marginTop: "0.75rem" }}>
     {items.map((item, i) => (
@@ -35,6 +130,7 @@ const BulletList: React.FC<{ items: string[] }> = ({ items }) => (
     ))}
   </ul>
 );
+
 
 export default function PGAPage() {
   return (
@@ -52,11 +148,58 @@ export default function PGAPage() {
         <p style={{ fontSize: "1.05rem", opacity: 0.9, lineHeight: 1.6 }}>
           Predictive Gait Analysis (PGA) is a human-centered research project focused on early
           detection of mobility decline and fall risk using minimal sensing in real-world
-          environments.
+          environments. Source code is available on GitHub, the experimental dataset (IMU recordings and videos) is provided under Data, and the Executive Summary and Poster offer high-level documentation of the project’s motivation and design.
         </p>
       </header>
 
+      <div style={{ marginBottom: "1.5rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+        <a
+          href="https://github.com/deviamar/predictive-gait-analysis/tree/main"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#2563eb", textDecoration: "underline" }}
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://drive.google.com/drive/folders/1rCGqkWPsfDxp_-JHScxSccDoRixHejuz?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#2563eb", textDecoration: "underline" }}
+        >
+          Data
+        </a>
+
+        <a
+          href="public/pdfs/PGA_GCC_R2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#2563eb", textDecoration: "underline" }}
+        >
+          Executive Summary
+        </a>
+
+        <a
+          href="public/images/PGA_poster.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#2563eb", textDecoration: "underline" }}
+        >
+          Poster
+        </a>
+      </div>
+
+      <Figure
+          src="/images/RSLS_demo.jpg"
+          alt="Live Demonstration During a Research Symposium Poster Session."
+          caption="Live Demonstration During a Research Symposium Poster Session."
+        />
+
+
       <Section title="Overview" id="overview">
+        
+
         <p>
           The project began during the Google Case Competition, where my team explored
           opportunities for technology to meaningfully improve quality of life for an aging
@@ -89,6 +232,9 @@ export default function PGAPage() {
         </p>
       </Section>
 
+      
+
+
       <Section title="Motivation: Aging in Place and Mobility Decline" id="motivation">
         <p>
           Across interviews, clinical literature, and market research, one theme consistently
@@ -106,6 +252,7 @@ export default function PGAPage() {
           ]}
         />
 
+
         <p style={{ marginTop: "1rem" }}>
           Mobility decline is particularly critical. Research shows that{" "}
           <strong>
@@ -117,6 +264,45 @@ export default function PGAPage() {
           continuous monitoring far more valuable than episodic clinical assessments.
         </p>
       </Section>
+
+
+      <Section title="Positioning and Broader Context" id="positioning">
+        <p>
+          Many existing eldercare technologies emphasize:
+        </p>
+
+        <BulletList
+          items={[
+            "Emergency alerts after falls",
+            "High-cost robotic systems",
+            "Wearables with low long-term adherence",
+          ]}
+        />
+
+        <p style={{ marginTop: "1rem" }}>
+          In contrast, PGA emphasizes:
+        </p>
+
+        <BulletList
+          items={[
+            "Prevention over reaction",
+            "Longitudinal monitoring",
+            "Human-centered design",
+            "Integration into existing care workflows",
+          ]}
+        />
+
+        <p style={{ marginTop: "1rem" }}>
+          This approach aligns with broader trends in health technology and embedded AI already
+          being explored by organizations such as Google, particularly in on-device machine
+          learning, health data platforms, and scalable preventative care systems.
+        </p>
+      </Section>
+
+
+
+
+
 
       <Section title="Why a Cane Attachment?" id="why-cane">
         <p>From both research and user interviews, several constraints shaped the design:</p>
@@ -187,6 +373,21 @@ export default function PGAPage() {
             , especially in eldercare contexts.
           </p>
         </Subsection>
+      </Section>
+
+      <Section title="Clinical and Expert Input">
+          <p>
+            In parallel with technical development, this project was informed by exposure to physicians and physical therapists at El Camino Hospital’s Acute Rehabilitation Facility, where I observed how gait and mobility are evaluated in practice.
+          </p>
+          <p>
+            During discussions with clinicians and observation of gait assessments, I learned that fall risk is evaluated using a combination of biomechanical and behavioral indicators. These include walking speed, step width, postural stability, reliance on assistive devices, trunk posture (upright vs. forward-leaning), directional drift, variability in foot placement, and overall steadiness during ambulation. Clinicians also assess cognitive-motor interaction by observing whether patients can follow instructions and engage in conversation while walking, as difficulty with dual-task walking is associated with increased fall risk.
+          </p>
+          <p>
+            A shadowing experience with a physical therapist further highlighted the importance of linking observed gait patterns to underlying functional impairments. For example, altered foot strike patterns (e.g., reduced heel strike) were associated with quadriceps weakness, while shortened stride and increased asymmetry were linked to lower-limb strength deficits and balance impairment. This reinforced a focus on muscle weakness as a modifiable risk factor that can be addressed through targeted strength and balance exercises.
+          </p>
+          <p>
+            These clinical insights motivated a shift from generic mobility metrics toward identifying specific gait abnormalities associated with lower-limb weakness and instability. To explore this, I studied documented gait abnormalities, analyzed reference videos, and experimentally simulated these patterns while collecting IMU data from both cane-mounted and foot-mounted placements. This enabled direct comparison of how different abnormalities manifest in sensor signals and guided both sensor placement and feature selection.
+          </p>
       </Section>
 
       <Section title="Experimental Exploration: Cane vs. Foot Placement" id="placement">
@@ -269,103 +470,11 @@ export default function PGAPage() {
         </div>
       </Section>
 
-      <Section title="Machine Learning Framing" id="ml">
-        <p>
-          Rather than attempting clinical diagnosis, the ML objective is framed as:
-        </p>
-
-        <BulletList
-          items={[
-            "Detecting deviations from an individual’s baseline",
-            "Classifying specific gait abnormality patterns linked to known risk factors",
-            "Mapping detected patterns to targeted intervention suggestions",
-          ]}
-        />
-
-        <p style={{ marginTop: "1rem" }}>
-          For example:
-        </p>
-
-        <BulletList
-          items={[
-            "Reduced stride length and clearance → associated with lower-limb weakness → recommend strength and balance exercises",
-            "Increased reliance on the cane → potential decline in stability → flag for physician review",
-          ]}
-        />
-
-        <p style={{ marginTop: "1rem" }}>
-          This framing is consistent with established clinical tools such as gait speed tests,
-          chair-stand tests, and balance assessments, while enabling{" "}
-          <strong>continuous, real-world monitoring</strong>.
-        </p>
-      </Section>
-
-      <Section title="Design Philosophy" id="philosophy">
-        <p>
-          This project is intentionally <strong>not</strong> a fully autonomous robot or a
-          socially assistive companion. Instead, it focuses on solving{" "}
-          <strong>one widespread, high-impact problem well</strong>.
-        </p>
-
-        <p style={{ marginTop: "1rem" }}>
-          Core design principles:
-        </p>
-
-        <BulletList
-          items={[
-            "Safety: no active actuation or destabilizing behavior",
-            "Low cognitive load: no complex interfaces required",
-            "Passive monitoring: sensing occurs naturally during use",
-            "Clinical relevance: features map to known gait and balance metrics",
-            "Scalability: affordable, lightweight, and energy-efficient",
-          ]}
-        />
-      </Section>
-
-      <Section title="Positioning and Broader Context" id="positioning">
-        <p>
-          Many existing eldercare technologies emphasize:
-        </p>
-
-        <BulletList
-          items={[
-            "Emergency alerts after falls",
-            "High-cost robotic systems",
-            "Wearables with low long-term adherence",
-          ]}
-        />
-
-        <p style={{ marginTop: "1rem" }}>
-          In contrast, PGA emphasizes:
-        </p>
-
-        <BulletList
-          items={[
-            "Prevention over reaction",
-            "Longitudinal monitoring",
-            "Human-centered design",
-            "Integration into existing care workflows",
-          ]}
-        />
-
-        <p style={{ marginTop: "1rem" }}>
-          This approach aligns with broader trends in health technology and embedded AI already
-          being explored by organizations such as Google, particularly in on-device machine
-          learning, health data platforms, and scalable preventative care systems.
-        </p>
-      </Section>
-
-      <Section title="Key Insights and Lessons Learned" id="insights">
-        <BulletList
-          items={[
-            "Hardware simplicity often increases real-world impact.",
-            "IMU data alone can be surprisingly expressive when analyzed longitudinally.",
-            "Sensor placement fundamentally shapes what can be learned.",
-            "Specific, interpretable outputs are more valuable than vague “risk scores.”",
-            "Assistive technology must respect dignity and autonomy to be adopted.",
-          ]}
-        />
-      </Section>
+      <FullFigure
+        src="/public/images/PGA_poster.jpg"
+        alt=""
+      />
+      
 
       <Section title="Future Directions" id="future">
         <p>If continued, this project would explore:</p>

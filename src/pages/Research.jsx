@@ -30,27 +30,26 @@ export default function Research() {
       ],
     },
     {
-      title: "Elder Ally – Smart Gait Detection System",
+      title: "Elder Ally: Predictive Gait Analysis System",
       meta: "Health Technology | 2024-25",
       image: "/images/home/SCA.jpg",
       description:
-        "Developed an Arduino- and IMU-based cane attachment to monitor gait parameters for early mobility-decline detection. Honored with Judges Award (Top 5) at Foothill’s Research Symposium.",
+        "Developed an Arduino and IMU-based cane attachment for monitoring gait parameters associated with early mobility decline; received Judges Award (Top 5) at Foothill's Research Symposium.",
       tags: ["Health Tech", "Wearable Sensors", "IoT"],
       links: [
-        { label: "Website", href: "https://elder-ally.org" },
+        { label: "Project Overview", href: "/research/pga" },
+        { label: "GitHub", href: "https://github.com/deviamar/predictive-gait-analysis/tree/main" }
       ],
     },
     {
     title: "ELLA (English Language Learning Assistant)",
     meta: "Human-Centered Research | 2024",
-    image: "/images/home/ella.png", // <- change to your actual asset path
+    image: "/images/ella.png",
     description:
-      "Conducted user research with international/ESL students and instructors to identify barriers to speaking confidence and consistent practice. Synthesized findings into a human-centered concept for an adaptive, low-pressure conversational learning assistant.",
-    tags: ["HCI", "User Research", "GenAI", "Education"],
+      "Led human-centered research with international students and ESL instructors to identify barriers to speaking confidence and real-world communication. Synthesized findings into design requirements for a low-pressure, adaptive conversational learning assistant.",
+    tags: ["HCI", "Language Learning", "GenAI", "Education"],
     links: [
       { label: "Project Overview", href: "/research/ella" },
-      { label: "RSL Poster (PDF)", href: "/pdfs/ELLA_RSL_Poster.pdf" }, // <- update filename
-      { label: "GitHub", href: "https://github.com/deviamar/ella" }, // <- update repo URL
     ],
   },
     {

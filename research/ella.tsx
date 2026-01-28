@@ -1,309 +1,208 @@
-// src/research/ella.tsx
-import React from "react";
-
-type LinkItem = { label: string; href: string };
-
-const Container: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <main style={{ maxWidth: 980, margin: "0 auto", padding: "3rem 1.25rem" }}>
-    {children}
-  </main>
-);
-
-const Header: React.FC<{
-  title: string;
-  subtitle: string;
-  links?: LinkItem[];
-}> = ({ title, subtitle, links }) => (
-  <header style={{ marginBottom: "2rem" }}>
-    <h1 style={{ fontSize: "2.25rem", fontWeight: 800, marginBottom: "0.5rem" }}>
-      {title}
-    </h1>
-    <p style={{ fontSize: "1.05rem", opacity: 0.9, lineHeight: 1.6 }}>
-      {subtitle}
-    </p>
-
-    {links && links.length > 0 && (
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem", marginTop: "1rem" }}>
-        {links.map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            target={l.href.startsWith("http") ? "_blank" : undefined}
-            rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            style={{
-              display: "inline-block",
-              padding: "0.5rem 0.75rem",
-              borderRadius: 999,
-              border: "1px solid rgba(255,255,255,0.16)",
-              background: "rgba(255,255,255,0.06)",
-              textDecoration: "none",
-              color: "inherit",
-              fontSize: "0.95rem",
-            }}
-          >
-            {l.label} ↗
-          </a>
-        ))}
-      </div>
-    )}
-  </header>
-);
-
-const Section: React.FC<{ title: string; children: React.ReactNode; id?: string }> = ({
-  title,
-  children,
-  id,
-}) => (
-  <section id={id} style={{ marginTop: "2.5rem" }}>
-    <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "0.75rem" }}>{title}</h2>
-    <div style={{ lineHeight: 1.65, fontSize: "1.02rem" }}>{children}</div>
-  </section>
-);
-
-const Subsection: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div style={{ marginTop: "1.4rem" }}>
-    <h3 style={{ fontSize: "1.18rem", fontWeight: 700, marginBottom: "0.5rem" }}>{title}</h3>
-    <div style={{ lineHeight: 1.65 }}>{children}</div>
-  </div>
-);
-
-const BulletList: React.FC<{ items: React.ReactNode[] }> = ({ items }) => (
-  <ul style={{ paddingLeft: "1.2rem", marginTop: "0.75rem" }}>
-    {items.map((item, i) => (
-      <li key={i} style={{ marginBottom: "0.4rem" }}>
-        {item}
-      </li>
-    ))}
-  </ul>
-);
-
-const Callout: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div
-    style={{
-      marginTop: "1.25rem",
-      padding: "1rem 1rem",
-      borderRadius: 12,
-      background: "rgba(255,255,255,0.06)",
-      border: "1px solid rgba(255,255,255,0.10)",
-    }}
-  >
-    <p style={{ margin: 0, fontWeight: 700 }}>{title}</p>
-    <div style={{ marginTop: "0.6rem" }}>{children}</div>
-  </div>
-);
-
-export default function EllaPage() {
-  // Update these to your real links/files
-  const links: LinkItem[] = [
-    { label: "GitHub", href: "https://github.com/deviamar/ella" },
-    { label: "RSL Poster (PDF)", href: "/pdfs/ELLA_RSL_Poster.pdf" },
-  ];
-
+export default function EllaProject() {
   return (
-    <Container>
-      <Header
-        title="ELLA — English Language Learning Assistant"
-        subtitle="A human-centered research project exploring how international and ESL students build speaking confidence—and how adaptive, low-pressure conversational practice can reduce barriers to language growth."
-        links={links}
-      />
+    <main className="max-w-4xl mx-auto px-6 py-16 space-y-12 text-gray-800 leading-relaxed">
+      
+      {/* Title */}
+      <header className="space-y-4">
+        <h1 className="text-4xl font-bold">ELLA: A Human-Centered Study of Spoken English Learning</h1>
+        <p className="italic text-gray-600 text-justify">
+          This study received IRB approval from the Foothill–De Anza Community College District.
+        </p>
+      </header>
 
-      <Section title="Project Overview" id="overview">
-        <p>
-          ELLA is a human-centered research project that started from a simple observation: many
-          international and ESL students understand English grammar and vocabulary, but still
-          avoid speaking in real settings due to anxiety, fear of judgment, and lack of
-          consistent practice opportunities. Rather than jumping straight into building a
-          product, the project began with <strong>user research</strong> to understand the real
-          constraints and motivations behind language learning behavior.
+      {/* Project Description */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold mb-4">Project Description</h2>
+        <p className="text-justify">
+          Being able to effectively communicate in English directly impacts the quality of life of a person living in the United States, but it is often challenging for international college students. From prior research, I found that mobile apps can be helpful for learning vocabulary and practicing skills like grammar, but few directly support speaking, cultural knowledge, and real-world communication. I became interested in investigating the main challenges international students at Foothill and De Anza face when learning English as a second (or third) language, and how low-pressure speaking practice could better support language acquisition.
         </p>
 
-        <p style={{ marginTop: "1rem" }}>
-          The core question that guided the work was:
+        <p className="text-justify">
+          To understand these challenges, I interviewed faculty and tutors in the Listening and Speaking Center (LSC), Writing and Language Center (WLC), and ESL division regarding their experiences supporting international students. I then recruited student participants from Foothill and De Anza to complete an online survey.
         </p>
 
-        <blockquote
-          style={{
-            margin: "1rem 0",
-            padding: "0.9rem 1rem",
-            borderLeft: "4px solid rgba(255,255,255,0.25)",
-            background: "rgba(255,255,255,0.06)",
-            borderRadius: 10,
-          }}
-        >
-          <strong>
-            How can we support consistent, confidence-building speaking practice for ESL
-            learners without increasing cognitive load or creating social pressure?
-          </strong>
-        </blockquote>
-      </Section>
+        <p className="text-justify">
+          Through this survey, I assessed students' current English skills, goals and challenges, experiences with English-learning apps, and app features they may find helpful. All participant data was kept strictly confidential, and participants had the right to discontinue their participation at any time without penalty. The results of this work informed the design of a language-learning system focused on reducing anxiety and increasing speaking practice, with the long-term goal of developing an app that could potentially be used as an additional tool in the college curriculum.
+        </p>
+      </section>
 
-      <Section title="Motivation" id="motivation">
-        <p>
-          Across conversations with students and educators, a pattern kept repeating:
-          learners often have access to content (videos, textbooks, flashcards), but struggle
-          with <strong>low-stakes, frequent speaking practice</strong>. For many students, the
-          hardest part is not knowing what to say—it’s feeling safe enough to say it.
+      {/* Survey Link */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Student Survey</h2>
+        <p className="text-justify">
+          The full survey instrument used to collect data from international and ESL students is available here:
+        </p>
+        <p className="mt-2">
+          <a
+            href="/pdfs/StudentQuestionnaire.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            View Student Survey (PDF)
+          </a>
+        </p>
+      </section>
+
+      {/* IRB Process */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold mb-4">IRB Approval Process</h2>
+        <p className="text-justify">
+          Because this project was conducted independently rather than as part of a class, obtaining IRB approval required additional time and coordination. At the time, IRB requests for both colleges were overseen by a single reviewer, which extended the approval timeline. To move the project forward, I actively followed up with my faculty mentor and communicated directly with Elaine, the college researcher, to schedule meetings and address questions related to recruitment, consent, and survey design.
         </p>
 
-        <Subsection title="Problem Framing">
-          <BulletList
-            items={[
-              <>
-                <strong>Speaking anxiety</strong> and fear of embarrassment reduce practice frequency.
-              </>,
-              <>
-                <strong>Inconsistent feedback</strong> makes it hard to build confidence and correct errors.
-              </>,
-              <>
-                <strong>High-pressure social contexts</strong> (classrooms, group settings) can slow progress.
-              </>,
-              <>
-                <strong>Fragmented tools</strong> don’t integrate practice, reflection, and progression in one loop.
-              </>,
-            ]}
-          />
-        </Subsection>
-      </Section>
-
-      <Section title="Research Process" id="process">
-        <Subsection title="User Research">
-          <p>
-            The project was grounded in qualitative + quantitative data collection. The goal
-            was to learn how learners actually practice, what blocks them, and what kinds of
-            support feel motivating (not annoying or overwhelming).
-          </p>
-
-          <BulletList
-            items={[
-              <>Designed and deployed a questionnaire targeting international/ESL learners.</>,
-              <>Conducted interviews to capture lived experiences around confidence and practice.</>,
-              <>Spoke with ESL instructors/tutors to understand patterns they see repeatedly.</>,
-              <>Synthesized results into requirements and design principles for an assistive system.</>,
-            ]}
-          />
-
-          <Callout title="Key Insight">
-            <p style={{ margin: 0 }}>
-              Learners don’t just need “more practice.” They need a{" "}
-              <strong>low-pressure environment</strong> that encourages frequent speaking,
-              provides lightweight guidance, and reinforces progress without judgment.
-            </p>
-          </Callout>
-        </Subsection>
-
-        <Subsection title="Evidence → Requirements">
-          <p>
-            Instead of building a feature list, the outcome of research became a set of
-            constraints that shaped the solution direction:
-          </p>
-
-          <BulletList
-            items={[
-              <>
-                <strong>Low friction</strong>: practice should be easy to start (no setup, no social risk).
-              </>,
-              <>
-                <strong>Adaptive difficulty</strong>: interactions should match proficiency and gradually stretch it.
-              </>,
-              <>
-                <strong>Confidence-first feedback</strong>: corrections should be supportive, not discouraging.
-              </>,
-              <>
-                <strong>Short sessions</strong>: frequent micro-practice beats rare long sessions.
-              </>,
-              <>
-                <strong>Progress visibility</strong>: learners should feel improvement week-to-week.
-              </>,
-            ]}
-          />
-        </Subsection>
-      </Section>
-
-      <Section title="System Concept" id="concept">
-        <p>
-          Based on the research, ELLA was framed as an <strong>English Language Learning Assistant</strong>{" "}
-          focused on conversational practice. The core concept is a system that can:
+        <p className="text-justify">
+          Based on feedback from Elaine—the researcher who reviewed and approved my study—I learned that survey questions should be designed not only to collect information, but also to support meaningful analysis and downstream design decisions. My original survey included a short-response question asking students to describe their perceived strengths in English; however, the prompt was too broad. Students could interpret “strengths” in many different ways (e.g., speaking, writing, grammar, or confidence), which made responses difficult to compare or prioritize.
         </p>
 
-        <BulletList
-          items={[
-            <>Provide low-stakes speaking prompts and guided dialogue.</>,
-            <>Adapt to a learner’s proficiency level and goals.</>,
-            <>Offer gentle corrections and examples (grammar, phrasing, pronunciation cues).</>,
-            <>Support reflection loops (what went well, what to practice next).</>,
-          ]}
-        />
-
-        <Subsection title="Why Generative AI (and why carefully)">
-          <p>
-            Generative AI is useful here because language learning is inherently open-ended—there
-            isn’t one “correct” conversation path. However, the design goal isn’t to impress with
-            intelligence; it’s to create a practice environment that is:
-          </p>
-
-          <BulletList
-            items={[
-              <>
-                <strong>Supportive</strong> (reduces fear of judgment),
-              </>,
-              <>
-                <strong>Consistent</strong> (always available),
-              </>,
-              <>
-                <strong>Structured</strong> (keeps practice purposeful),
-              </>,
-              <>
-                <strong>Accountable</strong> (tracks progress over time).
-              </>,
-            ]}
-          />
-
-          <Callout title="Design Principle">
-            <p style={{ margin: 0 }}>
-              The model should not replace human teachers—it should{" "}
-              <strong>increase the frequency of practice between human interactions</strong>.
-            </p>
-          </Callout>
-        </Subsection>
-      </Section>
-
-      <Section title="Outcomes" id="outcomes">
-        <p>
-          The main output of ELLA was a research-backed concept and set of design requirements,
-          communicated through a written synthesis and an RSL presentation/poster. The work
-          demonstrates a complete end-to-end research loop:{" "}
-          <strong>problem discovery → user research → synthesis → system framing</strong>.
+        <p className="text-justify">
+          Rather than keeping an open-ended question with vague scope, I removed it and instead asked students to define what “success in English” meant to them in one or two sentences, followed by a structured set of statements measuring comfort with specific skills (for example, speaking with teachers, understanding fast-paced conversations, using slang, or giving presentations).
         </p>
 
-        <Subsection title="What This Project Showcases">
-          <BulletList
-            items={[
-              <>Ability to run human-centered research and translate findings into design requirements.</>,
-              <>Comfort working across disciplines (HCI, education, AI).</>,
-              <>A preference for evidence-driven building rather than feature-driven building.</>,
-            ]}
-          />
-        </Subsection>
-      </Section>
-
-      <Section title="Future Directions" id="future">
-        <p>If continued, this project would explore:</p>
-
-        <BulletList
-          items={[
-            <>Pilot prototypes with constrained, structured conversation flows (to evaluate engagement + learning).</>,
-            <>Longitudinal progress tracking (confidence, fluency proxies, vocabulary growth).</>,
-            <>Instructor-informed feedback strategies (when to correct, how to correct).</>,
-            <>Evaluation with real learners to test whether “low-pressure” actually increases speaking frequency.</>,
-          ]}
-        />
-
-        <p style={{ marginTop: "1rem" }}>
-          More broadly, ELLA reinforced my interest in human-centered AI systems where the goal
-          is not maximal model capability, but <strong>meaningful behavior change</strong> for
-          real people in real contexts.
+        <p className="text-justify">
+          I also learned that for background variables such as age, collecting exact values often increases analysis burden without meaningfully improving design insight. This reinforced that question formats should be chosen based on how the data will be used, not simply what seems interesting to ask. These revisions led me to refine question wording, reduce unnecessary complexity, and structure responses in ways that improved interpretability and relevance to system design.
         </p>
-      </Section>
-    </Container>
+      </section>
+
+      {/* Faculty Insights */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Insights from Faculty Interviews</h2>
+
+        <h3 className="text-lg font-semibold mt-4">Speaking—not grammar—is the primary barrier</h3>
+        <p className="text-justify">
+          Faculty consistently observed that students are often competent in reading and grammar but struggle with spoken communication. The main difficulties are pronunciation, speech flow, and understanding fast, informal conversation—causing many students to freeze despite knowing the language.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Confidence and identity matter as much as skill</h3>
+        <p className="text-justify">
+          Instructors noted that students frequently lose confidence when their accent is misunderstood and may avoid speaking altogether. Cultural norms and negative reactions from others amplify anxiety, showing that emotional safety is central to language learning.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Native language shapes recurring error patterns</h3>
+        <p className="text-justify">
+          Faculty reported that error patterns are strongly influenced by a student's first language, such as difficulty with L/R sounds for Japanese speakers or word order for Spanish speakers. These mistakes persist because they become habitual and subconscious.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Correction must protect confidence</h3>
+        <p className="text-justify">
+          Effective instruction relies on indirect correction, repetition, and guiding students to self-correct rather than interrupting or publicly correcting them. Preserving confidence is essential for maintaining willingness to speak.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Immersion and context drive learning</h3>
+        <p className="text-justify">
+          Faculty emphasized that conversation, role-playing real situations, and exposure through movies or music are more effective than rule-based drills alone. Language acquisition improves when learners hear and use English in meaningful, real-world contexts.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Technology is useful but cannot replace instructors</h3>
+        <p className="text-justify">
+          Apps are viewed as helpful for independent practice but insufficient as a substitute for human instruction. Faculty highlighted barriers such as device access, technical issues, and limited class time, while seeing promise in AI for conversation, pronunciation, and rephrasing.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4">Most valuable app features are adaptive and supportive</h3>
+        <p className="text-justify">
+          Faculty envisioned tools that support pronunciation, simulate natural conversation, track common errors, and adjust language difficulty dynamically. The goal is not rote practice, but emotionally safe, personalized speaking support that encourages continued use.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">
+          Insights from the student questionnaire (Foothill/De Anza)
+        </h2>
+
+        <ol className="list-decimal pl-6 space-y-4">
+          <li>
+            <strong>The biggest “language gap” is structure, not vocabulary.</strong>{" "}
+            Different sentence structure/word order was the most common
+            difference reported, followed by verb tenses and articles,
+            suggesting grammar structure is a primary friction point.
+          </li>
+
+          <li>
+            <strong>English “culture” is a real learning requirement.</strong>{" "}
+            Students cited informality, direct communication, and classroom
+            participation expectations, supporting practice grounded in social
+            situations rather than isolated sentences.
+          </li>
+
+          <li>
+            <strong>Learners span a wide proficiency range.</strong>{" "}
+            Responses ranged from new learners to those who have studied English
+            their whole lives, indicating that one fixed difficulty path will
+            not work for all learners.
+          </li>
+
+          <li>
+            <strong>“Success in English” is defined as real-world functioning.</strong>{" "}
+            Students emphasized communication with teachers, friends, and
+            coworkers, handling work or school tasks, and participating
+            socially.
+          </li>
+
+          <li>
+            <strong>Students want specificity: comfort by scenario.</strong>{" "}
+            Scenario-based comfort statements reveal where breakdowns occur more
+            clearly than vague self-assessments.
+          </li>
+
+          <li>
+            <strong>Informal English is a recurring pain point.</strong>{" "}
+            Slang, idioms, pop culture, and fast-paced speech frequently cause
+            confusion, matching faculty observations.
+          </li>
+
+          <li>
+            <strong>Top desired features prioritize practice, feedback, and safety.</strong>{" "}
+            Students requested pronunciation checking, conversation practice,
+            paraphrasing, AI chat, and support for formal vs informal language.
+          </li>
+
+          <li>
+            <strong>Trust and accessibility shape adoption.</strong>{" "}
+            Barriers include cost, ads, repetition, connectivity, storage, and
+            comfort with technology, suggesting the system should reduce
+            friction and anxiety rather than replace instruction.
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">
+          What this project showcases
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            Ability to run human-centered research and translate findings into
+            design requirements.
+          </li>
+          <li>Comfort working across disciplines (HCI, education, AI).</li>
+          <li>
+            Preference for evidence-driven building rather than feature-driven
+            building.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Future directions</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            Pilot prototypes with constrained, structured conversation flows to
+            evaluate engagement and learning.
+          </li>
+          <li>
+            Longitudinal progress tracking (confidence, fluency proxies,
+            vocabulary growth).
+          </li>
+          <li>
+            Instructor-informed feedback strategies (when to correct and how to
+            correct).
+          </li>
+          <li>
+            Evaluation with real learners to test whether low-pressure design
+            increases speaking frequency.
+          </li>
+        </ul>
+      </section>
+    </main>
   );
 }

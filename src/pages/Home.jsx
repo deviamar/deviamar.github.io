@@ -5,7 +5,7 @@ import { Mail, Linkedin, Github } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen pt-20 pb-24 px-8 text-gray-700">
+    <div className="min-h-screen pt-28 pb-24 px-8 text-gray-700">
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-10 items-start">
           <div className="flex justify-center md:justify-start">
@@ -17,7 +17,7 @@ export default function Home() {
           </div>
 
           <div className="text-left">
-            <h1 className="text-3xl font-bold text-slate-700 mb-4">
+            <h1 className="text-3xl font-bold tracking-wider text-slate-700 mb-4">
               Hello!
             </h1>
             <div className="text-gray-700 max-w-xl">
@@ -73,7 +73,7 @@ export default function Home() {
               role="Undergraduate Researcher"
               org="UC Davis"
               dates="2025–present"
-              //links={[{ label: "", to: "/research" }]}
+              links={[{ label: "", to: "/research" }]}
               desc="Contributing to the ALOHA bimanual manipulation and active vision platform by improving kinematics and low-latency WebRTC streaming, while supporting development of learning-based world models for mobile manipulation."
             />
 
@@ -84,7 +84,7 @@ export default function Home() {
               org="Foothill College"
               dates="2024–25"
               award="Finalist (Top 20), Research & Service Leadership Symposium (RSLS)"
-              //links={[{ label: "Project Overview", to: "/research/birh" }, { label: "GitHub", to: "https://github.com/deviamar/BiRH" }]}
+              links={[{ label: "Project Overview", to: "/research/birh" }, { label: "GitHub", to: "https://github.com/deviamar/BiRH" }]}
               desc="Explored dexterous manipulation through a tendon-driven robotic hand, emphasizing grasp stability and tendon routing using MuJoCo simulation with UR10e validation."
             />
 
@@ -95,8 +95,8 @@ export default function Home() {
               org="Foothill College"
               dates="2024–25"
               award="Judges Award (Top 5/164), Research & Service Leadership Symposium (RSLS)"
-              //links={[{ label: "Project Overview", to: "/research/pga" }]}
-              desc="Led development of an IMU-based mobility sensing system exploring cane vs. foot placement tradeoffs, informed by clinical shadowing."
+              links={[{ label: "Project Overview", to: "/research/pga" }, { label: "GitHub", to: "https://github.com/deviamar/predictive-gait-analysis/tree/main"}]}
+              desc="Led development of an IMU-based gait sensing system evaluating cane vs. foot sensor placement, informed by clinical shadowing in acute rehabilitation."
             />
           </div>
         </section>
