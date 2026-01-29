@@ -103,19 +103,19 @@ export default function Home() {
 
         {/* Current Involvements */}
         <section className="mt-14">
-          <h2 className="text-2xl font-bold mb-6 text-slate-800">Club Leadership</h2>
+          <h2 className="text-2xl font-bold mb-6 text-slate-800">Technical Projects</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <MiniCard
               title="Cyclone RoboSub: Vision Subteam Lead"
               desc="Leading development of ML-based computer vision pipelines run on Jetson nano for autonomous underwater navigation. Integrating perception with control systems through Unreal Engine simulation."
               link="/research"
-              linkLabel="Learn more →"
+              //linkLabel="Learn more →"
             />
             <MiniCard
               title="NeuroTech: Project Manager"
               desc="Leading a six-member team building an EEG-based brain-computer interface for robotic vehicle control, coordinating system development across hardware, signal processing, and software."
               link="/research"
-              linkLabel="Learn more →"
+              //linkLabel="Learn more →"
             />
           </div>
         </section>
@@ -191,9 +191,9 @@ function MiniCard({ title, desc, link, linkLabel }) {
       <p className="text-sm text-gray-600 mt-3 leading-relaxed">{desc}</p>
       {link && (
         <div className="mt-4">
-          <Link to={link} className="text-blue-500 font-semibold hover:underline">
+          {/* <Link to={link} className="text-blue-500 font-semibold hover:underline">
             {linkLabel || 'Learn more →'}
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>

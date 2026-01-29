@@ -15,6 +15,7 @@ export default function Research() {
         "MuJoCo Simulation",
       ],
       links: [
+        { label: "Project Overview", href: "/research/birh" },
         { label: "GitHub", href: "https://github.com/deviamar/BiRH" },
       ],
     },

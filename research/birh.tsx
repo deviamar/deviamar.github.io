@@ -7,7 +7,7 @@ const Section: React.FC<{
   id?: string;
   right?: string;
 }> = ({ title, children, id, right }) => (
-  <section id={id} style={{ marginTop: "3rem", marginBottom: "3rem" }}>or soft  
+  <section id={id} style={{ marginTop: "3rem", marginBottom: "3rem" }}>
     <div
       style={{
         display: "flex",
