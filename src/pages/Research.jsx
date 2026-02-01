@@ -34,8 +34,8 @@ export default function Research() {
         "Model Evaluation (Macro-F1)",
       ],
       links: [
-        { label: "Project Overview", href: "/research/ed" },
-        { label: "GitHub", href: "https://github.com/deviamar/MLSN-Team-6" },
+        { label: "Project Writeup", href: "/research/ed" },
+        { label: "GitHub", href: "https://github.com/deviamar/MLSN-Team-6H" },
       ],
     },
 

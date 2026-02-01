@@ -8,6 +8,7 @@ import Awards from './pages/Awards';
 import BiRHPage from "/research/birh.tsx";
 import PGAPage from "/research/pga.tsx";
 import ELLAPage from "/research/ella.tsx";
+import EDPage from "/research/ed.tsx";
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/research/birh" element={<BiRHPage />} />
         <Route path="/research/pga" element={<PGAPage />} />
         <Route path="/research/ella" element={<ELLAPage />} />
+        <Route path="/research/ed" element={<EDPage />} />
       </Routes>
     </div>
   );
