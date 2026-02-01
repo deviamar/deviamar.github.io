@@ -20,6 +20,26 @@ export default function Research() {
       ],
     },
     {
+      title: "Facial Emotion Detection",
+      meta: "Computer Vision | MLSN Team Project | 2026",
+      image: "/images/home/emotion-detection.png",
+      description:
+        "Built a real-time facial emotion recognition system and improved performance substantially by standardizing face-crop preprocessing and fine-tuning transfer-learning backbones (e.g., ViT/EfficientNet/ConvNeXt). Added robust evaluation (macro-F1, confusion matrix) and stabilized live webcam predictions with temporal smoothing and confidence thresholds.",
+      tags: [
+        "Computer Vision",
+        "Transfer Learning",
+        "FastAI + PyTorch",
+        "OpenCV Face Cropping",
+        "Real-Time Inference",
+        "Model Evaluation (Macro-F1)",
+      ],
+      links: [
+        { label: "Project Overview", href: "/research/ed" },
+        { label: "GitHub", href: "https://github.com/deviamar/MLSN-Team-6" },
+      ],
+    },
+
+    {
       title: "3D Object Reconstruction for Robot Grasping",
       meta: "Literature Review | 2025",
       image: "/images/home/3D.png",
