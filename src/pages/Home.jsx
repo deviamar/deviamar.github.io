@@ -85,7 +85,7 @@ export default function Home() {
               dates="2024–25"
               award="Finalist (Top 20), Research & Service Leadership Symposium (RSLS)"
               links={[{ label: "Project Overview", to: "/research/birh" }, { label: "GitHub", to: "https://github.com/deviamar/BiRH" }]}
-              desc="Explored dexterous manipulation through a tendon-driven robotic hand, emphasizing grasp stability and tendon routing using MuJoCo simulation with UR10e validation."
+              desc="Conducted ablation studies on hand kinematics to quantify how reduced degrees of freedom constrain grasp feasibility, using MuJoCo simulation on a UR10e arm and an AHAP-inspired grasp taxonomy."
             />
 
             <ResearchRow
@@ -96,7 +96,7 @@ export default function Home() {
               dates="2024–25"
               award="Judges Award (Top 5/164), Research & Service Leadership Symposium (RSLS)"
               links={[{ label: "Project Overview", to: "/research/pga" }, { label: "GitHub", to: "https://github.com/deviamar/predictive-gait-analysis/tree/main"}]}
-              desc="Led development of an IMU-based gait sensing system evaluating cane vs. foot sensor placement, informed by clinical shadowing in acute rehabilitation."
+              desc="Developed an IMU-based gait evaluation system to extract clinically meaningful mobility features, informed by clinical shadowing in acute rehabilitation."
             />
           </div>
         </section>
@@ -107,15 +107,13 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <MiniCard
               title="Cyclone RoboSub: Vision Subteam Lead"
-              desc="Leading development of ML-based computer vision pipelines run on Jetson nano for autonomous underwater navigation. Integrating perception with control systems through Unreal Engine simulation."
-              link="/research"
-              //linkLabel="Learn more →"
+              desc="Implement vision-based perception pipelines for autonomous underwater navigation and build Unreal Engine-based synthetic data pipelines to evaluate robustness and support sim-to-real transfer in collaboration with the controls subteam."
+              link="/research/cyclone.tsx"
             />
             <MiniCard
               title="NeuroTech: Project Manager"
-              desc="Leading a six-member team building an EEG-based brain-computer interface for robotic vehicle control, coordinating system development across hardware, signal processing, and software."
-              link="/research"
-              //linkLabel="Learn more →"
+              desc="Led design of an EEG-based control pipeline for navigation of a wheeled mobile robotic platform using SSVEP decoding and ML-based motor intent inference under real-time constraints."
+              link="/research/neurotech.tsx"
             />
           </div>
         </section>

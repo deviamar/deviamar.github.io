@@ -1,7 +1,26 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export default function Research() {
   const projects = [
+    {
+      title: "Facial Emotion Detection",
+      meta: "Computer Vision | MLSN Team Project | 2026",
+      image: "/images/MLSN.png",
+      description:
+        "Built a real-time facial emotion recognition system and achieved substantial performance gains through standardized face-crop preprocessing and careful fine-tuning of transfer-learning backbones (ResNet and Vision Transformer). Implemented rigorous evaluation using macro-F1 and confusion matrices.",
+      tags: [
+        "Computer Vision",
+        "Transfer Learning",
+        "Vision Transformers",
+        "Model Evaluation",
+      ],
+      links: [
+        { label: "Project Overview", href: "/research/ed" },
+        { label: "GitHub", href: "https://github.com/deviamar/MLSN-Team-6" },
+      ],
+    },
+
     {
       title: "Bio-Inspired Robotic Hand",
       meta: "Research Project | 2024-25",
@@ -20,26 +39,6 @@ export default function Research() {
       ],
     },
     {
-      title: "Facial Emotion Detection",
-      meta: "Computer Vision | MLSN Team Project | 2026",
-      image: "/images/home/emotion-detection.png",
-      description:
-        "Built a real-time facial emotion recognition system and improved performance substantially by standardizing face-crop preprocessing and fine-tuning transfer-learning backbones (e.g., ViT/EfficientNet/ConvNeXt). Added robust evaluation (macro-F1, confusion matrix) and stabilized live webcam predictions with temporal smoothing and confidence thresholds.",
-      tags: [
-        "Computer Vision",
-        "Transfer Learning",
-        "FastAI + PyTorch",
-        "OpenCV Face Cropping",
-        "Real-Time Inference",
-        "Model Evaluation (Macro-F1)",
-      ],
-      links: [
-        { label: "Project Writeup", href: "/research/ed" },
-        { label: "GitHub", href: "https://github.com/deviamar/MLSN-Team-6H" },
-      ],
-    },
-
-    {
       title: "3D Object Reconstruction for Robot Grasping",
       meta: "Literature Review | 2025",
       image: "/images/home/3D.png",
@@ -47,7 +46,7 @@ export default function Research() {
         "Studied how computer vision can infer 3D shape and position for grasping tasks. Compared single-view, multi-view, and transfer-learning approaches to evaluate accuracy and shape fidelity.",
       tags: ["Computer Vision", "Literature Review"],
       links: [
-        { label: "SSG Presentation", href: "/pdfs/SSG_CV.pdf" },
+        /*{ label: "SSG Presentation", href: "/pdfs/SSG_CV.pdf" },*/
       ],
     },
     {
@@ -84,17 +83,19 @@ export default function Research() {
     },
   ];
 
+  const isExternalHref = (href) => {
+    if (!href) return false;
+    return href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("/pdfs/");
+  };
+
   return (
     <section className="pt-32 pb-20 px-8 max-w-5xl mx-auto">
       <h2 className="text-4xl font-bold text-slate-800 mb-6 text-center">
         Research Projects
       </h2>
+
       <p className="text-gray-600 text-center mb-14 max-w-2xl mx-auto">
-        These projects have taught me to identify meaningful problems, build on
-        existing research, and design and test solutions through iterative
-        experimentation. They’ve also strengthened my ability to seek mentorship,
-        collaborate across disciplines, and navigate ambiguity through hands-on
-        research and innovation.
+        This page highlights a mix of technical and research projects I’ve worked on, including robotics systems, computer vision models, and exploratory work in math and human-centered design.
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -108,14 +109,18 @@ export default function Research() {
               alt={project.title}
               className="h-56 w-full object-cover rounded-t-2xl"
             />
+
             <div className="p-6">
               <h3 className="text-xl font-bold text-slate-800 mb-1">
                 {project.title}
               </h3>
+
               <p className="text-sm text-gray-500 mb-4">{project.meta}</p>
+
               <p className="text-gray-700 leading-relaxed mb-4">
                 {project.description}
               </p>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
                   <span
@@ -126,16 +131,36 @@ export default function Research() {
                   </span>
                 ))}
               </div>
+
               <div className="flex flex-wrap gap-3">
-                {project.links.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className="text-blue-500 text-sm font-semibold hover:underline"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {project.links.map((link) => {
+                  const href = link.href;
+
+                  if (isExternalHref(href)) {
+                    const isHttp = href.startsWith("http");
+                    return (
+                      <a
+                        key={link.label}
+                        href={href}
+                        target={isHttp ? "_blank" : undefined}
+                        rel={isHttp ? "noopener noreferrer" : undefined}
+                        className="text-blue-500 text-sm font-semibold hover:underline"
+                      >
+                        {link.label}
+                      </a>
+                    );
+                  }
+
+                  return (
+                    <Link
+                      key={link.label}
+                      to={href}
+                      className="text-blue-500 text-sm font-semibold hover:underline"
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -144,4 +169,3 @@ export default function Research() {
     </section>
   );
 }
-

@@ -1,249 +1,229 @@
-const TAGS = [
-  "Computer Vision",
-  "Transfer Learning",
-  "FastAI / PyTorch",
-  "OpenCV",
-  "Real-Time Inference",
-  "Model Evaluation (Macro-F1)",
-] as const;
+import React from "react";
 
-type Link = { label: string; href: string };
-type Stat = { label: string; value: string };
-
-type Props = {
-  repoUrl?: string;
-  writeupUrl?: string;
-  imageSrc?: string;
-
-  // Optional: replace placeholders with your real results when you have them
-  highlights?: Stat[];
-  datasetSummary?: Stat[];
-};
-
-export default function EmotionDetectionProject({
-  repoUrl = "https://github.com/deviamar/MLSN-Team-6H",
-  writeupUrl = "/research/ed",
-  imageSrc = "/images/home/emotion-detection.png",
-  highlights = [
-    { label: "Best model", value: "ViT / EfficientNet / ConvNeXt (transfer learning)" },
-    { label: "Key metric", value: "Macro-F1 (primary), Accuracy (secondary)" },
-    { label: "Deployment", value: "Live webcam inference + smoothing + confidence threshold" },
-  ],
-  datasetSummary = [
-    { label: "Classes", value: "happy, neutral, sad, surprise" },
-    { label: "Preprocessing", value: "face-detect → padded crop → resize → folder-by-class" },
-    { label: "Why it matters", value: "reduces train ↔ webcam mismatch" },
-  ],
-}: Props) {
+export default function EmotionDetectionProject() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16 space-y-12 text-gray-800 leading-relaxed">
+    <main className="max-w-4xl mx-auto px-6 py-16 space-y-14 text-gray-800 leading-relaxed">
       {/* Title */}
-      <header className="space-y-5">
-        <div className="space-y-2">
-          <h1 className="text-4xl font-bold">Facial Emotion Detection</h1>
-          <p className="text-gray-600 text-justify">
-            A computer vision pipeline for classifying facial expressions into four categories
-            and running real-time webcam inference. I implemented a Random Forest baseline,
-            then upgraded to transfer learning (FastAI/PyTorch) with standardized face-crop
-            preprocessing to improve robustness under real lighting and camera conditions.
-          </p>
-        </div>
-
-        {/* Optional hero image */}
-        <div className="rounded-2xl overflow-hidden border border-gray-200 bg-gray-50">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imageSrc}
-            alt="Facial Emotion Detection preview"
-            className="w-full h-auto object-cover"
-          />
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 pt-1">
-          {TAGS.map((tag) => (
-            <span
-              key={tag}
-              className="text-sm px-3 py-1 rounded-full bg-gray-100 border border-gray-200"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+      <header className="space-y-6">
+        <h1 className="text-4xl font-bold">Facial Emotion Classification</h1>
+        <p className="text-gray-600 text-justify">
+          This project studies facial emotion recognition under limited data and compute by
+          benchmarking progressively stronger model families on a manually curated dataset.
+          Starting from a Random Forest baseline, we transition to transfer-learning CNNs
+          (ResNet) and finally a Vision Transformer (ViT). Models are evaluated with
+          accuracy, macro-F1, and confusion matrices, with attention to robustness under
+          real webcam input.
+        </p>
       </header>
 
-      {/* Quick links */}
-      <section className="flex flex-wrap gap-3">
-        <a
-          href={writeupUrl}
-          className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50"
-        >
-          Project Writeup
-        </a>
-        <a
-          href={repoUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50"
-        >
-          GitHub Repo
-        </a>
-      </section>
-
-      {/* Highlights */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Highlights</h2>
-        <div className="grid sm:grid-cols-3 gap-4">
-          {highlights.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl border border-gray-200 bg-white p-4 space-y-2"
-            >
-              <div className="text-sm text-gray-500">{s.label}</div>
-              <div className="font-semibold">{s.value}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Project overview */}
+      {/* Overview */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Project Overview</h2>
         <p className="text-justify">
-          The system supports an end-to-end workflow: dataset preprocessing, training, evaluation
-          (confusion matrix + class-wise metrics), and live webcam inference. The key upgrade was
-          aligning training data with inference data by training on face crops produced by the same
-          detector used in the webcam loop.
+          We started from a noisy Kaggle facial expression dataset and manually curated it
+          into four classes: <strong>happy</strong>, <strong>neutral</strong>,{" "}
+          <strong>sad</strong>, and <strong>surprise</strong>. Each image was reviewed to
+          remove incorrect labels, heavy occlusion, watermarks/large text overlays, and
+          ambiguous expressions. The final dataset contains approximately{" "}
+          <strong>~700 images per class</strong> (≈2.8k total).
         </p>
+        <p className="text-justify">We evaluate three model families:</p>
+        <ol className="list-decimal pl-6 space-y-2">
+          <li>
+            <strong>Random Forest:</strong> classical baseline using flattened pixel features.
+          </li>
+          <li>
+            <strong>CNN (ResNet):</strong> ImageNet-pretrained backbone fine-tuned with FastAI.
+          </li>
+          <li>
+            <strong>Vision Transformer (ViT):</strong> transformer backbone fine-tuned on the curated dataset.
+          </li>
+        </ol>
       </section>
 
-      {/* Dataset + preprocessing */}
+      {/* Data */}
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Dataset and Preprocessing</h2>
         <p className="text-justify">
-          Webcam demos often fail because training images are “clean” while inference inputs are
-          low-resolution face crops with variable lighting. To reduce that train–test mismatch, I
-          added a preprocessing pipeline that generates a standardized face-crop dataset.
+          A key failure mode in emotion recognition is mismatch between training images and
+          webcam frames. To reduce this gap, we add a face-cropping preprocessing step that:
         </p>
-
-        <div className="grid sm:grid-cols-3 gap-4">
-          {datasetSummary.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl border border-gray-200 bg-white p-4 space-y-2"
-            >
-              <div className="text-sm text-gray-500">{s.label}</div>
-              <div className="font-semibold">{s.value}</div>
-            </div>
-          ))}
-        </div>
-
         <ul className="list-disc pl-6 space-y-2">
-          <li className="text-justify">Detect face(s) in each image.</li>
-          <li className="text-justify">Select the largest face, crop with padding, resize to a consistent input size.</li>
-          <li className="text-justify">Save to <code>faces_cropped/&lt;class&gt;</code> for training.</li>
+          <li>Detects faces using the same detector used at inference time.</li>
+          <li>Selects the largest detected face and applies padding.</li>
+          <li>Resizes images to a fixed resolution (224×224 for deep models).</li>
+          <li>Stores standardized crops in <code>faces_cropped/&lt;class&gt;</code>.</li>
+        </ul>
+        <p className="text-justify">
+          During training, we use conservative “face-safe” augmentation (small rotation/zoom,
+          mild lighting variation, minimal warp) to improve generalization without distorting
+          expression geometry.
+        </p>
+      </section>
+
+      {/* Results Summary */}
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Key Results</h2>
+        <ul className="list-disc pl-6 space-y-2 text-justify">
+          <li>
+            <strong>Random Forest baseline:</strong> Accuracy ≈ <strong>0.540</strong>, Macro-F1 ≈{" "}
+            <strong>0.530</strong>.
+          </li>
+          <li>
+            <strong>Naive CNN fine-tune (ResNet-34):</strong> started near chance (val acc ≈{" "}
+            <strong>0.20</strong>), peaked at <strong>0.631</strong>, and ended at{" "}
+            <strong>0.585</strong>, with rising validation loss indicating mild overfitting.
+          </li>
+          <li>
+            <strong>Tuned CNN (ResNet-34, curated data + face-safe aug + early stopping):</strong>{" "}
+            Accuracy ≈ <strong>0.764</strong>, Macro-F1 ≈ <strong>0.755</strong>. Large gains
+            were driven by improved data quality and training protocol rather than architecture.
+          </li>
+          <li>
+            <strong>Vision Transformer (ViT):</strong> Accuracy ≈ <strong>0.780</strong>, Macro-F1 ≈{" "}
+            <strong>0.771</strong> (best overall).
+          </li>
         </ul>
       </section>
 
       {/* Modeling */}
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Modeling</h2>
+      <section className="space-y-8">
+        <h2 className="text-2xl font-semibold">Modeling Approach</h2>
 
+        {/* RF */}
         <div className="space-y-2">
           <h3 className="text-lg font-semibold">Baseline: Random Forest</h3>
           <p className="text-justify">
-            The baseline flattens face pixels into feature vectors and trains a RandomForest classifier.
-            It’s quick to implement but limited in generalization—especially across lighting and camera quality.
+            Images are resized and flattened into pixel vectors and classified using a Random
+            Forest. This baseline quantifies the limitations of hand-engineered pixel features
+            for subtle facial expression discrimination, particularly for visually similar
+            classes (e.g., neutral vs sad).
           </p>
+          <ul className="list-disc pl-6">
+            <li>Accuracy ≈ <strong>0.540</strong></li>
+            <li>Macro-F1 ≈ <strong>0.530</strong></li>
+          </ul>
         </div>
 
+        {/* Naive CNN learning curve */}
         <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Improved: Transfer Learning (FastAI/PyTorch)</h3>
+          <h3 className="text-lg font-semibold">CNN Transfer Learning (ResNet) — Initial Run</h3>
           <p className="text-justify">
-            The upgraded pipeline fine-tunes pretrained vision backbones on the standardized face-crop dataset.
-            Transfer learning improves performance with limited data by leveraging strong pretrained representations.
+            We first fine-tuned an ImageNet-pretrained ResNet-34 using a minimal training recipe.
+            Performance began near chance for a 4-class task (val acc ≈ <strong>0.20</strong>) and
+            improved rapidly, but later epochs showed increasing validation loss, consistent with
+            limited-data overfitting and unstable optimization.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li className="text-justify">
-              Training flow: freeze head → train → unfreeze → fine-tune with augmentation and LR scheduling.
-            </li>
-            <li className="text-justify">
-              Candidates: ResNet (baseline TL), plus stronger backbones like EfficientNet, ConvNeXt, and ViT.
+          <ul className="list-disc pl-6">
+            <li>Start: Accuracy ≈ <strong>0.200</strong> (epoch 0)</li>
+            <li>Peak: Accuracy ≈ <strong>0.631</strong> (epoch 6)</li>
+            <li>Final: Accuracy ≈ <strong>0.585</strong> (epoch 7)</li>
+          </ul>
+        </div>
+
+        {/* Tuned CNN */}
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold">CNN Transfer Learning (ResNet) — Tuned Model</h3>
+          <p className="text-justify">
+            We then improved training by using the curated dataset, conservative face-safe
+            augmentation, and explicit generalization control (best-checkpoint selection and early
+            stopping). With the same ResNet-34 backbone, this produced a large jump in performance,
+            demonstrating that data quality and training protocol dominated model capacity in this regime.
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Accuracy ≈ <strong>0.764</strong></li>
+            <li>Macro-F1 ≈ <strong>0.755</strong></li>
+            
+          </ul>
+        </div>
+
+        {/* ViT */}
+        <div className="space-y-2">
+          <h3 className="text-lg font-semibold">Vision Transformer (ViT)</h3>
+          <p className="text-justify">
+            A Vision Transformer is fine-tuned via transfer learning. ViT models global relationships
+            between image patches using self-attention, which can better capture distributed facial cues
+            (eyes–brows–mouth interactions) than purely local convolutional features.
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Accuracy ≈ <strong>0.780</strong></li>
+            <li>Macro-F1 ≈ <strong>0.771</strong></li>
+            <li>
+              Happy class (notable improvement): Precision ≈ <strong>0.822</strong>, Recall ≈{" "}
+              <strong>0.879</strong> (F1 ≈ <strong>0.850</strong>)
             </li>
           </ul>
         </div>
       </section>
 
       {/* Evaluation */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Evaluation</h2>
-        <p className="text-justify">
-          Because emotion classes are typically imbalanced, I prioritize macro-F1 alongside accuracy, and
-          inspect confusion matrices to understand which expressions collapse to “neutral” under ambiguity.
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li className="text-justify">Accuracy</li>
-          <li className="text-justify">Macro F1-score</li>
-          <li className="text-justify">Confusion matrix + per-class precision/recall</li>
-        </ul>
-      </section>
+<section className="space-y-4">
+  <h2 className="text-2xl font-semibold">Evaluation and Failure Modes</h2>
+  <p className="text-justify">
+    Rather than relying on a single accuracy value, we evaluated models using both{" "}
+    <strong>accuracy</strong> and <strong>macro-F1</strong> and examined confusion matrices to
+    understand how different emotions were being misclassified in practice. This made it possible
+    to assess not only overall performance, but also whether errors were concentrated in specific
+    classes.
+  </p>
+  <p className="text-justify">
+    Across all model families, the same pattern emerged: confusion between{" "}
+    <strong>neutral</strong> and <strong>sad</strong>. This reflects the subtle visual boundary
+    between these expressions and residual ambiguity in the dataset even after manual curation.
+    In contrast, <strong>happy</strong> and <strong>surprise</strong> were consistently easier to
+    classify due to more distinct facial cues.
+  </p>
+</section>
 
-      {/* Live inference */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Live Webcam Inference</h2>
-        <p className="text-justify">
-          For a stable demo experience, I smooth predictions over time and apply a confidence threshold
-          so low-confidence frames show “uncertain” instead of forcing an incorrect label.
-        </p>
+{/* Deployment */}
+<section className="space-y-4">
+  <h2 className="text-2xl font-semibold">Live Webcam Inference</h2>
+  <p className="text-justify">
+    To move beyond static image evaluation, we deployed the trained models in a real-time webcam
+    pipeline using OpenCV. This exposed challenges that are not present in curated datasets,
+    including lighting variation, motion blur, partial occlusion, and inconsistent face framing.
+  </p>
+  <ul className="list-disc pl-6 space-y-2">
+    <li>
+      We standardized face cropping so that webcam frames matched the training distribution: the
+      largest detected face is selected, padded to preserve facial context, and resized
+      consistently before classification.
+    </li>
+    <li>
+      We applied confidence-based filtering so that low-confidence predictions are labeled as{" "}
+      <em>uncertain</em> rather than forcing unstable emotion outputs.
+    </li>
+    <li>
+      This deployment step highlighted the importance of preprocessing consistency for achieving
+      reliable behavior under real-world input.
+    </li>
+  </ul>
+</section>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-4">
-          <h3 className="text-lg font-semibold mb-2">Stability features</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li className="text-justify">Face crop with padding (avoid cutting forehead/chin).</li>
-            <li className="text-justify">Temporal smoothing (moving average / majority vote).</li>
-            <li className="text-justify">Confidence threshold (e.g., if max prob &lt; 0.45 → “uncertain”).</li>
-          </ul>
-        </div>
-      </section>
+{/* Takeaway */}
+<section className="space-y-4">
+  <h2 className="text-2xl font-semibold">Key Takeaways</h2>
+  <ul className="list-disc pl-6 space-y-2">
+    <li>
+      The largest performance gains came from <strong>dataset curation and preprocessing</strong>,
+      not from changing architectures.
+    </li>
+    <li>
+      A tuned ResNet substantially outperformed a naive fine-tuning run, showing that{" "}
+      <strong>training protocol mattered more than model size</strong> in this regime.
+    </li>
+    <li>
+      Vision Transformers achieved the strongest overall results, but the improvement over a
+      well-trained CNN was incremental, indicating that expression ambiguity is now the dominant
+      bottleneck.
+    </li>
+    <li>
+      Persistent confusion between neutral and sad suggests that future progress depends more on{" "}
+      <strong>better labeling criteria or richer data</strong> than on deeper networks alone.
+    </li>
+  </ul>
+</section>
 
-      {/* How to run (short) */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">How to Run</h2>
-
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Preprocess face crops</h3>
-          <pre className="bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-            <code>{`python prep_faces.py`}</code>
-          </pre>
-        </div>
-
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold">Run webcam inference</h3>
-          <pre className="bg-gray-950 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm">
-            <code>{`# Random Forest
-python runModel.py
-
-# Transfer learning model
-python runModelCnn.py`}</code>
-          </pre>
-        </div>
-      </section>
-
-      {/* Next steps */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Next Steps</h2>
-        <ol className="list-decimal pl-6 space-y-3">
-          <li className="text-justify">
-            Add balanced sampling / class weights + label cleanup using top-loss inspection.
-          </li>
-          <li className="text-justify">
-            Compare backbones (EfficientNet vs ConvNeXt vs ViT) under the same preprocessing and metrics.
-          </li>
-          <li className="text-justify">
-            Improve robustness with stronger augmentation and calibration (confidence → “uncertain”).
-          </li>
-        </ol>
-      </section>
     </main>
   );
 }
