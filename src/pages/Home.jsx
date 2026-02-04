@@ -78,6 +78,17 @@ export default function Home() {
             />
 
             <ResearchRow
+              image="/images/cyclone/Manatee.jpeg"
+              title="Cyclone RoboSub"
+              role="Vision Subteam Lead"
+              org="UC Davis"
+              dates="2025-Present"
+              //award="Judges Award (Top 5/164), Research & Service Leadership Symposium (RSLS)"
+              links={[{ label: "Project Overview", to: "/research/cyclone.tsx" }/*, { label: "GitHub", to: "https://github.com/deviamar/predictive-gait-analysis/tree/main"}*/]}
+              desc="Implement vision-based perception pipelines for autonomous underwater navigation and build Unreal Engine-based synthetic data pipelines to evaluate robustness and support sim-to-real transfer in collaboration with the controls subteam."
+            />
+
+            <ResearchRow
               image="/images/home/BiRH.png"
               title="Bio-Inspired Robotic Hand (BiRH)"
               role="Independent Research Project"
@@ -97,23 +108,6 @@ export default function Home() {
               award="Judges Award (Top 5/164), Research & Service Leadership Symposium (RSLS)"
               links={[{ label: "Project Overview", to: "/research/pga" }, { label: "GitHub", to: "https://github.com/deviamar/predictive-gait-analysis/tree/main"}]}
               desc="Developed an IMU-based gait evaluation system to extract clinically meaningful mobility features, informed by clinical shadowing in acute rehabilitation."
-            />
-          </div>
-        </section>
-
-        {/* Current Involvements */}
-        <section className="mt-14">
-          <h2 className="text-2xl font-bold mb-6 text-slate-800">Technical Projects</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <MiniCard
-              title="Cyclone RoboSub: Vision Subteam Lead"
-              desc="Implement vision-based perception pipelines for autonomous underwater navigation and build Unreal Engine-based synthetic data pipelines to evaluate robustness and support sim-to-real transfer in collaboration with the controls subteam."
-              link="/research/cyclone.tsx"
-            />
-            <MiniCard
-              title="NeuroTech: Project Manager"
-              desc="Led design of an EEG-based control pipeline for navigation of a wheeled mobile robotic platform using SSVEP decoding and ML-based motor intent inference under real-time constraints."
-              link="/research/neurotech.tsx"
             />
           </div>
         </section>
@@ -176,24 +170,6 @@ function ResearchRow({image, title, role, org, dates, award, desc, links = [],})
           {desc}
         </p>
       </div>
-    </div>
-  );
-}
-
-
-
-function MiniCard({ title, desc, link, linkLabel }) {
-  return (
-    <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-sm hover:-translate-y-1 hover:shadow-xl transition-all">
-      <h3 className="font-semibold text-lg text-gray-800">{title}</h3>
-      <p className="text-sm text-gray-600 mt-3 leading-relaxed">{desc}</p>
-      {link && (
-        <div className="mt-4">
-          {/* <Link to={link} className="text-blue-500 font-semibold hover:underline">
-            {linkLabel || 'Learn more →'}
-          </Link> */}
-        </div>
-      )}
     </div>
   );
 }
